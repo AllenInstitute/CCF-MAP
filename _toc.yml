@@ -1,0 +1,6 @@
+format: jb-book
+root: intro
+parts:
+  - caption: INTRODUCTION
+    chapters:
+      - file: notebooks/getting_started
