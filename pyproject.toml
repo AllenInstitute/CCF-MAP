@@ -1,0 +1,22 @@
+[project]
+name = "ccf-map"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "cloudpathlib>=0.21.0",
+    "jupyter>=1.1.1",
+    "jupyter-book>=1.0.4.post1",
+    "lab>=8.4",
+    "matplotlib>=3.9.4",
+    "numpy>=2.0.2",
+    "pandas>=2.2.3",
+    "seaborn>=0.13.2",
+    "simpleitk>=2.4.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
