@@ -1,6 +1,0 @@
-format: jb-book
-root: README
-parts:
-  - caption: INTRODUCTION
-    chapters:
-      - file: notebooks/getting_started
