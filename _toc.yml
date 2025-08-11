@@ -1,6 +1,7 @@
 format: jb-book
-root: intro
+root: index.md
 parts:
   - caption: INTRODUCTION
     chapters:
       - file: notebooks/getting_started
+  - caption: RESOURCES
