@@ -2,9 +2,9 @@
 
 This repository contains notebooks for accessing and using common coordinate frameworks (CCF) for mouse, marmoset, macaque, and human data.
 
-### CCF-MAP JupyterBook reference
+### CCF-MAP reference and tutorials
 
-https://alleninstitute.github.io/CCF-MAP/intro.html
+[JupyterBook references and tutorials](https://alleninstitute.github.io/CCF-MAP/intro.html) for downloading volumes, using CCFs in research, and for visualization. 
 
 ### Setup and installation
 
