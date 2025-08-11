@@ -1,22 +1,16 @@
 [project]
 name = "ccf-map"
 version = "0.1.0"
-description = "Add your description here"
+description = "Common Coordinate Framework Multispecies Atlas Primer"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.12"
 dependencies = [
-    "cloudpathlib>=0.21.0",
+    "cloudpathlib>=0.21.1",
     "jupyter>=1.1.1",
     "jupyter-book>=1.0.4.post1",
-    "lab>=8.4",
-    "matplotlib>=3.9.4",
-    "numpy>=2.0.2",
-    "pandas>=2.2.3",
+    "matplotlib>=3.10.5",
+    "numpy>=2.3.2",
+    "pandas>=2.3.1",
     "seaborn>=0.13.2",
-    "simpleitk>=2.4.1",
-]
-
-[dependency-groups]
-dev = [
-    "ipykernel>=6.29.5",
+    "simpleitk>=2.5.2",
 ]
