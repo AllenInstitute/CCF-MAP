@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -391,12 +391,14 @@ document.write(`
 </div>
 </div>
 </div>
-<p>All atlases have three major components: the <strong>template space</strong>, <strong>annotations</strong>, and <strong>ontology</strong></p>
+<p>All atlases have three major components: the <strong>anatomical template</strong>, <strong>annotation set</strong>, and <strong>parcellation terminology</strong></p>
 <ol class="arabic simple">
-<li><p>The <strong>template space</strong> is the image volume that defines the orientation, direction, and voxel size. In the macaque case, this is the Mac25 Rhesus template, which is comprised of an averaged T1 weighted MRI from 25 adult rhesus macaques.</p></li>
-<li><p>The <strong>annotations</strong> are manually defined segmentations of the template space that delineate anatomical structures.</p></li>
-<li><p>Annotations are named and labeled using the <strong>unified developing human brain annotation (uDHBA) ontology</strong>, which provides taxonomy of the structures and their relationship, along with metadata (eg. label colors)</p></li>
+<li><p>The <strong>anatomical template</strong> is a reference image volume that defines an <strong>anatomical space</strong>. The anatomical space sets the orientation and direction of the x,y,z axes and the voxel size. In the macaque case, the anatomical template is the Mac25Rhesus template, which is comprised of an averaged T1 weighted MRI from 25 adult rhesus macaques.</p></li>
+<li><p>The <strong>annotation set</strong> is a set of manually defined segmentations of the template space that delineate anatomical structures.</p></li>
+<li><p>Annotations are named and labeled using the <strong>Harmonized Ontology of Mammalian Brain Anatomy (HOMBA)</strong>, which provides taxonomy of the structures and their relationship, along with metadata (eg. label colors)</p></li>
 </ol>
+<p>Together, these components define an anatomical atlas.</p>
+<p><img alt="AtOM model of atlases" src="../_images/atom_model.png" /></p>
 </section>
 
     <script type="text/x-thebe-config">
