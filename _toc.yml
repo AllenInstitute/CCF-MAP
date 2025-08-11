@@ -4,3 +4,4 @@ parts:
   - caption: INTRODUCTION
     chapters:
       - file: notebooks/getting_started
+  - caption: RESOURCES
