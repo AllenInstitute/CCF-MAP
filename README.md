@@ -8,6 +8,14 @@ This repository contains notebooks for accessing and using common coordinate fra
 
 ### Setup and installation
 
+A clean conda environment is recommended for installation. For instructions on setting up conda, see [conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)
+
+To install tools for interacting with atlas assets, run
+
+```
+pip install -r requirements.txt
+pip install -e .
+```
 
 
 ## How to contribute 
