@@ -19,6 +19,6 @@ The data release also includes visualizations of each atlas as a neuroglancer in
 ### Documentation and notebooks
 
 - **[Getting started](notebooks/getting_started.ipynb)**: Introduction to atlas assets and data organization
-- **[Navigating neuroglancer](notebooks/neuroglancer_primer.ipynb)**: Brief introduction to navigating neuroglancer for visualizing atlases
+- **[Navigating neuroglancer](docs/neuroglancer_primer.md)**: Brief introduction to navigating neuroglancer's interface for visualizing atlases
 - **[Using atlas assets offline](notebooks/atlas_assets_offline.ipynb)**: Primer on using atlas parcellations and CCFs for querying voxels and accessing region masks
 
