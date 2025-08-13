@@ -6,4 +6,10 @@ parts:
       - file: notebooks/getting_started
       - file: docs/neuroglancer_primer
   - caption: DATA
+    chapters:
+      - file: descriptions/human_ccf.md
+      - file: descrptions/macaque_ccf.md
+      - file: descriptions/marmoset_ccf.md
   - caption: RESOURCES
+    chapters:
+      - file: docs/HOMBA_ontology_v1.md
