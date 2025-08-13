@@ -4,3 +4,6 @@ parts:
   - caption: INTRODUCTION
     chapters:
       - file: notebooks/getting_started
+      - file: docs/neuroglancer_primer
+  - caption: DATA
+  - caption: RESOURCES
