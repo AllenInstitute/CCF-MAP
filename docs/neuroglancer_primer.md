@@ -29,7 +29,7 @@ Panel buttons (top right) are used for toggling layers, selecting specific anato
 - **Layers** - Show/Hide layers list panel. Layers panel usage is described [below](#3-working-with-layers)
 - **Selection** - Show/Hide selection window, which shows linked data and metadata to cursor position. In the example image, the Selection panel shows current {x,y,z} coordinate in mm.
     - *Note*: selection can be pinned in place with Ctrl+Right click. This is helpful if selection details need to be copied for use in downstream analyses
-- **Layer side panel** - Show/hide layer panel, which shows information about data source, affine transforms, annotation labels, etc. Usage is described [below](#4-using-the-layer-side-panel-for-selecting-atlas-subdivisions)
+- **Layer side panel** - Show/hide layer panel, which shows information about data source, affine transforms, annotation labels, etc. Example usage is described [below](#4-using-the-layer-side-panel-for-selecting-atlas-subdivisions)
 - **Viewer state** - Show the [JSON viewer state](#5-reproducibility-and-sharing-using-the-json-viewer-state) 
 
 ### 2. Basic Navigation & Controls
@@ -49,13 +49,25 @@ Panel buttons (top right) are used for toggling layers, selecting specific anato
 
 ### 3. Working with Layers
 
-- **Toggle visibility**: Click the layer in the upper bar to turn it on/off; invisible layers are shown with strikethrough text (Cryo‑ET portal) ([chanzuckerberg.github.io](https://chanzuckerberg.github.io/cryoet-data-portal/stable/neuroglancer_quickstart.html?utm_source=chatgpt.com)).
-- In MICrONS, right-click layer tabs to open layer-specific controls ([tutorial.microns-explorer.org](https://tutorial.microns-explorer.org/neuroglancer-basic.html?utm_source=chatgpt.com)).
-- **Rendering controls** (e.g., adjust contrast, opacity, blending, volume rendering for 3D data) are accessed in the right-hand panel or via Ctrl‑click on the layer ([chanzuckerberg.github.io](https://chanzuckerberg.github.io/cryoet-data-portal/stable/neuroglancer_quickstart.html?utm_source=chatgpt.com)).
-
+- **Toggle visibility**: Click the [layers button](#panel-organization-b) in the panel buttons to toggle on/off. Current invisible layers are shown with strikethrough text in the [layer organization](#layer-organization-a) tab or with a strikethrough of the &#x1f441; symbol in the laters windown. Layers can be turned on by clicking the &#x1f441; symbol.
+- **Rendering controls** (e.g., adjust contrast, opacity, blending, volume rendering for 3D data) are accessible by clicking on the [layer side panel](#panel-organization-b) in the panel buttons, in the layers window, or using Ctrl‑click on the layer.
 
 ### 4. Using the layer side panel for selecting atlas subdivisions
 
+Neuroglancer allows for selecting and displaying individual anatomical annotations. By default, all annotated structures are shown in the segmentation and mesh layers.
+
+Individual anatomical annotations can be toggled on/off by double clicking on the annotation in any of the views. Note that the segmentation and mesh layers are linked. 
+
+Neuroglancer also permits selecting anatomical annotations using a text search in the **layer side panel**. 
+
+[Layer side panel](../images/layer_side_panel.png)
+
+For example, to select all structures that contain the word `caudate`:
+
+- Select the `Seg.` tab
+- In the text box, type `/` followed by your search term with partial matches included
+    - *Note*: in Neuroglancer, the `/` symbol allows for searching by regular expressions, eg. `/\d` shows all structures that contain a digit in the name or acronym 
+- Toggle on/off by clicking the &#x1f441; icon. Clicking the &#x1f441; icon at the top toggles all search hits on/off
 
 ### 5. Reproducibility and sharing using the JSON viewer state
 
