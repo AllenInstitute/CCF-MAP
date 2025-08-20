@@ -49,7 +49,7 @@ Panel buttons (top right) are used for toggling layers, selecting specific anato
 
 ### 3. Working with Layers
 
-- **Toggle visibility**: Click the [layers button](#panel-organization-b) in the panel buttons to toggle on/off. Current invisible layers are shown with strikethrough text in the [layer organization](#layer-organization-a) tab or with a strikethrough of the &#x1f441; symbol in the laters windown. Layers can be turned on by clicking the &#x1f441; symbol.
+- **Toggle visibility**: Click the [layers button](#panel-organization-b) in the panel buttons to toggle on/off. Current invisible layers are shown with strikethrough text in the [layer organization](#layer-organization-a) tab or with a strikethrough of the &#x1f441; symbol in the layers window. Layers can be turned on by clicking the &#x1f441; symbol.
 - **Rendering controls** (e.g., adjust contrast, opacity, blending, volume rendering for 3D data) are accessible by clicking on the [layer side panel](#panel-organization-b) in the panel buttons, in the layers window, or using Ctrl‑click on the layer.
 
 ### 4. Using the layer side panel for selecting atlas subdivisions
@@ -60,16 +60,21 @@ Individual anatomical annotations can be toggled on/off by double clicking on th
 
 Neuroglancer also permits selecting anatomical annotations using a text search in the **layer side panel**. 
 
-[Layer side panel](../images/layer_side_panel.png)
+![Layer side panel](../images/layer_side_panel.png)
 
 For example, to select all structures that contain the word `caudate`:
 
 - Select the `Seg.` tab
 - In the text box, type `/` followed by your search term with partial matches included
     - *Note*: in Neuroglancer, the `/` symbol allows for searching by regular expressions, eg. `/\d` shows all structures that contain a digit in the name or acronym 
-- Toggle on/off by clicking the &#x1f441; icon. Clicking the &#x1f441; icon at the top toggles all search hits on/off
+- Toggle on/off by clicking the &#x1f441; icon. Clicking the icon at the top toggles all search hits on/off
 
 ### 5. Reproducibility and sharing using the JSON viewer state
+
+One of the most powerful features in Neuroglancer is the ability to save the current view as a JSON object that can be shared. The current JSON state, which includes the view angle, panels, and visible layers, can be accessed by clicking the **viewer state** button in the panel buttons window. 
+
+- To save the current view, click the `Download` button, which saves the JSON viewer state. 
+- To load a previously saved JSON state, delete the current JSON and replace it with a previously saved JSON file (this can be done by click-and-drag the file from your local directory into the viewer state window)
 
 
 
