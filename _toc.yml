@@ -10,6 +10,9 @@ parts:
       - file: descriptions/human_ccf.md
       - file: descrptions/macaque_ccf.md
       - file: descriptions/marmoset_ccf.md
+  - caption: TUTORIALS
+    chapters:
+      - file: notebooks/working_with_annotation_volume.ipynb
   - caption: RESOURCES
     chapters:
       - file: docs/HOMBA_ontology_v1.md
