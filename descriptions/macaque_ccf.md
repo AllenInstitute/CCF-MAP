@@ -2,6 +2,8 @@
 
 This atlas uses the Mac25 Rhesus **template**, which is an averaged template from 25 *M. mulatta* individual brains resampled to 160 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**.  
 
+#### [View macaque CCF]("#### [View marmoset CCF]("https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/marmoset/HMBA-10X-Multiome-BG-MarmosetSlabROI/20250630/viewer_states/marmoset_roi_pins_ccf.json")
+
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mac25 Rhesus template           | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/templates/hmba-adult-macaque-mri-template/2025/template_160.nii.gz      |
