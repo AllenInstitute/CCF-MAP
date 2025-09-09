@@ -14,7 +14,7 @@ dependencies = [
 
 [project.optional-dependencies]
 notebooks = [
-    "jupyter>=1.0",     
+    "jupyter>=1.0",
     "ipykernel>=6.29",
     "nbformat>=5.9",
     "nbconvert>=7.10",
@@ -23,3 +23,10 @@ notebooks = [
     "seaborn>=0.13",
     "jupyter-book>=1.0",
 ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["annotation*"]  
