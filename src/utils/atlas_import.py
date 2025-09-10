@@ -139,6 +139,7 @@ def get_latest_atlases():
         p = dest / k[len(prefix):]         
         p.parent.mkdir(parents=True, exist_ok=True) 
         s3.download_file(bucket, k, str(p)) 
+        print(f"Downloaded {str(p)}")
 
 def download_atlas(
         species: str, 
