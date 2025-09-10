@@ -53,7 +53,7 @@ def download_data_assets(
     
     dest = Path(dest_dir).resolve()
     dest.mkdir(parents=True, exist_ok=True)
-    print(f"Created directory: {dest}")
+    print(f"Destination directory: {dest}")
 
     session = boto3.Session()
     client_kwargs = {}
@@ -146,16 +146,22 @@ def download_atlas(
         version: str = 2025):
 
     if species not in ['human', 'macaque', 'marmoset']:
-       raise RuntimeError(f"Species should be one of 'human', 'macaque', or 'marmoset'")
+       raise RuntimeError(f"Species should be one of 'human', 'macaque', 'marmoset', or 'all'")
     
-    manifest_filename = f"./data/atlases/hmba-adult-{species}-homba-atlas/{version}/manifest.json"
-    with open(manifest_filename) as f:
-        manifest_dict = json.load(f)
-    manifest = AtlasManifest.from_dict(manifest_dict)
+    if species == 'all':
+        species_set = ['human', 'macaque', 'marmoset']
+    else:
+        species_set = [species]
 
-    filestem = manifest.s3_prefixes()
+    for _species in species_set:
+        manifest_filename = f"./data/atlases/hmba-adult-{species}-homba-atlas/{version}/manifest.json"
+        with open(manifest_filename) as f:
+            manifest_dict = json.load(f)
+        manifest = AtlasManifest.from_dict(manifest_dict)
 
-    download_data_assets(filestem)
+        filestem = manifest.s3_prefixes()
+
+        download_data_assets(filestem)
     
 
 if __name__ == "__main__":

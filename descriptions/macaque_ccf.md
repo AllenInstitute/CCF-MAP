@@ -1,6 +1,6 @@
 ## Macaque CCF
 
-This atlas uses the Mac25 Rhesus **template**, which is an averaged template from 25 *M. mulatta* individual brains resampled to 160 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**.  
+This atlas uses the Mac25 Rhesus template, which is an averaged template from 25 *M. mulatta* individual brains resampled to 160 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**.  
 
 #### [View macaque CCF](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/macaque/HMBA-10X-Multiome-BG-MacaqueSlabROI/20250630/viewer_state/macaque_roi_pins_ccf.json)
 

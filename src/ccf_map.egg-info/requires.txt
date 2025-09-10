@@ -1,0 +1,15 @@
+boto3>=1.40.27
+cloudpathlib>=0.21.1
+numpy>=2
+pandas>=2.2
+simpleitk>=2.2
+
+[notebooks]
+jupyter>=1.0
+ipykernel>=6.29
+nbformat>=5.9
+nbconvert>=7.10
+ipywidgets>=8.1
+matplotlib>=3.8
+seaborn>=0.13
+jupyter-book>=1.0

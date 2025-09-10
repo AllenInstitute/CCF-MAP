@@ -1,0 +1,51 @@
+Metadata-Version: 2.4
+Name: ccf-map
+Version: 0.1.0
+Summary: Common Coordinate Framework Multispecies Atlas Primer
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: boto3>=1.40.27
+Requires-Dist: cloudpathlib>=0.21.1
+Requires-Dist: numpy>=2
+Requires-Dist: pandas>=2.2
+Requires-Dist: simpleitk>=2.2
+Provides-Extra: notebooks
+Requires-Dist: jupyter>=1.0; extra == "notebooks"
+Requires-Dist: ipykernel>=6.29; extra == "notebooks"
+Requires-Dist: nbformat>=5.9; extra == "notebooks"
+Requires-Dist: nbconvert>=7.10; extra == "notebooks"
+Requires-Dist: ipywidgets>=8.1; extra == "notebooks"
+Requires-Dist: matplotlib>=3.8; extra == "notebooks"
+Requires-Dist: seaborn>=0.13; extra == "notebooks"
+Requires-Dist: jupyter-book>=1.0; extra == "notebooks"
+
+# Common Coordinate Framework and Multi-Species Atlas Primer (CCF-MAP)
+
+This repository contains notebooks for accessing and using common coordinate frameworks (CCF) for mouse, marmoset, macaque, and human data.
+
+### CCF-MAP reference and tutorials
+
+[JupyterBook references and tutorials](https://alleninstitute.github.io/CCF-MAP/intro.html) for downloading volumes, using CCFs in research, and for visualization. 
+
+### Setup and installation
+
+A clean conda environment is recommended for installation. For instructions on setting up conda, see [conda documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)
+
+To install tools for interacting with atlas assets, run
+
+```
+pip install -r requirements.txt
+pip install -e .
+```
+
+
+## How to contribute 
+[JupyterBook Contribution Guide](docs/jupyterbook/README.md)
+
+Note: for scientific questions regarding the data this repository is accessing, please use the [Allen Institute's community forum](https://community.brain-map.org/).
+
+If you are having an issue with the code or notebooks not running properly, please open an issue on this Github repository. However, please see below.
+
+### Level of support
+
+We are not currently supporting this code, but simply releasing it to the community **AS IS** but are not able to provide any guarantees of support. The community is welcome to submit issues, but you should not expect an active response. 
