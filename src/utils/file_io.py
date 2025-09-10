@@ -2,7 +2,6 @@
 
 import SimpleITK as sitk
 import numpy as np
-from typing import List
 
 def sitk_to_npy(image):
     
