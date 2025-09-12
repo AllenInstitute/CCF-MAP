@@ -4,4 +4,4 @@ The Harmonized Ontology of Mammalian Brain Anatomy (HOMBA) is a harmonized cross
 
 #### Access
 
-- The HOMBA ontology is available [here](http://54.70.216.109:8080/HOMBA_ontology_v1.html)
+- The HOMBA ontology is available [here](./HOMBA_ontology_v1.html)
