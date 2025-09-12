@@ -6,5 +6,5 @@ src/ccf_map.egg-info/dependency_links.txt
 src/ccf_map.egg-info/requires.txt
 src/ccf_map.egg-info/top_level.txt
 src/utils/__init__.py
+src/utils/annotation.py
 src/utils/atlas_import.py
-src/utils/file_io.py

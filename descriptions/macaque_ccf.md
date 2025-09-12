@@ -1,4 +1,4 @@
-## Macaque CCF
+## Macaque
 
 This atlas uses the Mac25 Rhesus template, which is an averaged template from 25 *M. mulatta* individual brains resampled to 160 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**.  
 

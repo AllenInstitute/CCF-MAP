@@ -1,4 +1,4 @@
-## Human CCF
+## Human
 
 This atlas uses the [HCP template](https://www.humanconnectome.org/study/hcp-young-adult/document/hcp-young-adult-2025-release) from the August 2025 release, which is an averaged template from 1071 young adult brains scanned at 3T. This template has been resampled to 700 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**. 
 

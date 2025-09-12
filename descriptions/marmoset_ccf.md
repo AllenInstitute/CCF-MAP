@@ -1,4 +1,4 @@
-## Marmoset CCF
+## Marmoset
 
 This atlas uses the marmoset RIKEN25 template, which is an averaged template from 25 *C. jacchus* individual brains resampled to 70 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**.  
 

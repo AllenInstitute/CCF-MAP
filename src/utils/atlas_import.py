@@ -1,7 +1,7 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Set
+from typing import Any, Dict, Iterable, List, Set
 
 import boto3
 from botocore.config import Config
@@ -43,8 +43,10 @@ class AtlasManifest:
 
 def download_data_assets(
     prefixes: Iterable[str],
+    species: str,
+    version: int,
     bucket: str = 'allen-atlas-assets',
-    dest_dir: Path | str = './data/',
+    dest_dir: Path | str = './data/atlases',
     overwrite: bool = False,
     dry_run: bool = False,
     max_concurrency: int = 16,
@@ -52,6 +54,7 @@ def download_data_assets(
 ) -> List[Path]:
     
     dest = Path(dest_dir).resolve()
+    dest = dest / f'hmba-adult-{species}-homba-atlas/{version}'
     dest.mkdir(parents=True, exist_ok=True)
     print(f"Destination directory: {dest}")
 
@@ -87,14 +90,13 @@ def download_data_assets(
                     if key.endswith("/"):
                         continue
 
-                    # suffix filter (case-insensitive)
+                    # filter for selected filetypes
                     if not key.lower().endswith(normalized_suffixes):
-                        # Not one of the wanted types; skip.
                         continue
 
-                    local_path = dest / key
-                    local_path.parent.mkdir(parents=True, exist_ok=True)
-
+                    filename = key.split('/')[-1]
+                    local_path = dest / filename
+                    print(local_path)
                     if not overwrite and local_path.exists():
                         try:
                             if local_path.stat().st_size == obj.get("Size", -1):
@@ -154,14 +156,14 @@ def download_atlas(
         species_set = [species]
 
     for _species in species_set:
-        manifest_filename = f"./data/atlases/hmba-adult-{species}-homba-atlas/{version}/manifest.json"
+        manifest_filename = f"./data/atlases/hmba-adult-{_species}-homba-atlas/{version}/manifest.json"
         with open(manifest_filename) as f:
             manifest_dict = json.load(f)
         manifest = AtlasManifest.from_dict(manifest_dict)
 
         filestem = manifest.s3_prefixes()
 
-        download_data_assets(filestem)
+        download_data_assets(filestem, _species, version)
     
 
 if __name__ == "__main__":
