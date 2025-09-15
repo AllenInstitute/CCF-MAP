@@ -27,7 +27,11 @@ notebooks = [
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["utils*"]  
+
+[tool.setuptools.data-files]
+"share/ccf_map/notebooks" = ["notebooks/*.ipynb"]
