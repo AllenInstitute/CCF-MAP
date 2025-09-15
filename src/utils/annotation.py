@@ -21,7 +21,7 @@ class Annotation():
     _by_abbrev: pd.DataFrame = field(init=False, repr=False)
 
     def __post_init__(self) -> None:
-        """Precompute indexed views for fast lookups."""
+        """Precompute terminology dfs with value and acronym indices"""
         self._by_value = self.terminology.set_index("annotation_value", drop=True)
         self._by_abbrev = self.terminology.set_index("abbreviation", drop=True)
 
@@ -65,10 +65,10 @@ class Annotation():
         else:
             x, y, z = (int(coordinate[0]), int(coordinate[1]), int(coordinate[2]))
 
-        # Convert to NumPy indexing order z, y, x and bounds-check
+        # Convert to NumPy indexing order z, y, x. This is one of the most annoying aspects of this whole enterprise.
         zyx = (z, y, x)
         sz, sy, sx = self.npy.shape
-        if not (0 <= zyx[0] < sz and 0 <= zyx[1] < sy and 0 <= zyx[2] < sx):
+        if not (0 <= zyx[0] < sz and 0 <= zyx[1] < sy and 0 <= zyx[2] < sx): # Check for out of bounds values
             raise IndexError("Coordinate out of bounds for annotation volume")
 
         annotation_value = int(self.npy[zyx])
@@ -90,7 +90,6 @@ class Annotation():
         Returns:
             output_data: DataFrame with acronym and full name labels annotated for each coordinate"""
 
-        # Validate input columns
         required = {"x", "y", "z"}
         if not required.issubset(input_data.columns):
             missing = required - set(input_data.columns)
@@ -147,12 +146,10 @@ class Annotation():
         row = self._by_abbrev.loc[region_acronym]
 
         descendants = row["descendant_annotation_values"]
-        # Parse descendants if stored as a string
-        if isinstance(descendants, str):
+        if isinstance(descendants, str): 
             try:
                 descendants = ast.literal_eval(descendants)
             except Exception:
-                # Fallback: split on common delimiters
                 if "," in descendants:
                     descendants = [int(x) for x in descendants.split(",") if x.strip()]
                 else:
@@ -180,7 +177,7 @@ class Annotation():
         spacing = np.asarray(self.img.GetSpacing(), dtype=np.float64)
         direction = np.asarray(self.img.GetDirection(), dtype=np.float64).reshape(3, 3)
 
-        # Compute inverse mapping: idx = inv(direction) @ ((pt - origin) / spacing)
+        # Compute inverse mapping for lookup
         inv_dir = np.linalg.inv(direction)
         pts = np.asarray(points, dtype=np.float64)
         scaled = (pts - origin) / spacing
@@ -188,46 +185,21 @@ class Annotation():
         return np.rint(idx).astype(np.int64, copy=False)
 
 
-
 def sitk_to_npy(image) -> np.ndarray:
-    """Convert a SimpleITK image to a NumPy array with z, y, x axis order.
-
-    SimpleITK uses x, y, z ordering; NumPy arrays of volumes are typically z, y, x.
-    This function permutes axes accordingly before conversion.
-
-    Args:
-        image: Input SimpleITK image.
-
-    Returns:
-        np.ndarray: Volume data with shape (z, y, x).
-    """
+    """Convert a SimpleITK image to a NumPy array with z, y, x axis order"""
 
     return sitk.GetArrayFromImage(image)
 
 def npy_to_sitk(image_npy: np.ndarray):
-    """Convert a NumPy array (z, y, x) to a SimpleITK image (x, y, z).
+    """Convert a NumPy array (z, y, x) to a SimpleITK image (x, y, z)."""
 
-    Args:
-        image_npy: NumPy array representing a volume with shape (z, y, x).
-
-    Returns:
-        sitk.Image: SimpleITK image with axes permuted back to x, y, z.
-    """
     return sitk.GetImageFromArray(image_npy)
 
 def write_volume_to_file(volume: np.ndarray,
                          ref_img: sitk.Image,
                          output_filename: Union[str, Path]) -> None:
-    """Write a NumPy volume (z, y, x) to disk via SimpleITK.
+    """Write a NumPy volume (z, y, x) to disk via SimpleITK"""
 
-    Args:
-        volume: NumPy array volume with shape (z, y, x).
-        ref_img: Reference image used to get orientation, direction, spacing data.
-        output_filename: Destination filename accepted by SimpleITK.
-
-    Returns:
-        None. Writes the image to `output_filename`.
-    """
     img = npy_to_sitk(volume)
     img.CopyInformation(ref_img)
     sitk.WriteImage(img, str(output_filename))
