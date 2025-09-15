@@ -25,6 +25,9 @@ notebooks = [
     "jupyter-book>=1.0",
 ]
 
+[project.scripts]
+ccf-map-copy-notebooks = "utils.notebook_helper:main"
+
 [tool.setuptools]
 package-dir = {"" = "src"}
 include-package-data = true

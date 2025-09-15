@@ -13,7 +13,6 @@ A clean conda environment is recommended for installation. For instructions on s
 To install tools for interacting with atlas assets, run
 
 ```
-pip install -r requirements.txt
 pip install -e .
 ```
 
