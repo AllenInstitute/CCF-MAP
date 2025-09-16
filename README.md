@@ -16,6 +16,11 @@ To install tools for interacting with atlas assets, run
 pip install -e .
 ```
 
+For all dependencies associated with notebooks, run 
+
+```
+pip install "ccf_map[notebooks] @ git+https://github.com/alleninstitute/CCF-MAP.git"
+```
 
 ## How to contribute 
 [JupyterBook Contribution Guide](docs/jupyterbook/README.md)
