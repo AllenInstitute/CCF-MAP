@@ -1,10 +1,10 @@
 README.md
 pyproject.toml
+src/atlas_utils/__init__.py
+src/atlas_utils/annotation.py
+src/atlas_utils/atlas_import.py
 src/ccf_map.egg-info/PKG-INFO
 src/ccf_map.egg-info/SOURCES.txt
 src/ccf_map.egg-info/dependency_links.txt
 src/ccf_map.egg-info/requires.txt
 src/ccf_map.egg-info/top_level.txt
-src/utils/__init__.py
-src/utils/annotation.py
-src/utils/atlas_import.py

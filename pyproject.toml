@@ -1,5 +1,5 @@
 [project]
-name = "ccf-map"
+name = "ccf_map"
 version = "0.1.0"
 description = "Atlas Primer"
 readme = "README.md"
@@ -25,14 +25,10 @@ notebooks = [
     "jupyter-book>=1.0",
 ]
 
-
 [tool.setuptools]
 package-dir = {"" = "src"}
 include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["utils*"]  
-
-[tool.setuptools.data-files]
-"share/ccf_map/notebooks" = ["notebooks/*.ipynb"]
+include = ["atlas_utils*"]  

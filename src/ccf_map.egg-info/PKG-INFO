@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
-Name: ccf-map
+Name: ccf_map
 Version: 0.1.0
-Summary: Common Coordinate Framework Multispecies Atlas Primer
+Summary: Atlas Primer
 Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 Requires-Dist: boto3>=1.40.27
@@ -9,9 +9,9 @@ Requires-Dist: cloudpathlib>=0.21.1
 Requires-Dist: numpy>=2
 Requires-Dist: pandas>=2.2
 Requires-Dist: simpleitk>=2.2
+Requires-Dist: jupyter>=1.0
+Requires-Dist: ipykernel>=6.29
 Provides-Extra: notebooks
-Requires-Dist: jupyter>=1.0; extra == "notebooks"
-Requires-Dist: ipykernel>=6.29; extra == "notebooks"
 Requires-Dist: nbformat>=5.9; extra == "notebooks"
 Requires-Dist: nbconvert>=7.10; extra == "notebooks"
 Requires-Dist: ipywidgets>=8.1; extra == "notebooks"
@@ -34,10 +34,14 @@ A clean conda environment is recommended for installation. For instructions on s
 To install tools for interacting with atlas assets, run
 
 ```
-pip install -r requirements.txt
 pip install -e .
 ```
 
+For all dependencies associated with notebooks, run 
+
+```
+pip install "ccf_map[notebooks] @ git+https://github.com/alleninstitute/CCF-MAP.git"
+```
 
 ## How to contribute 
 [JupyterBook Contribution Guide](docs/jupyterbook/README.md)

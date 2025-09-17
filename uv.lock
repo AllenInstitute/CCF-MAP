@@ -248,6 +248,8 @@ source = { virtual = "." }
 dependencies = [
     { name = "boto3" },
     { name = "cloudpathlib" },
+    { name = "ipykernel" },
+    { name = "jupyter" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "numpy", version = "2.3.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "pandas" },
@@ -256,9 +258,7 @@ dependencies = [
 
 [package.optional-dependencies]
 notebooks = [
-    { name = "ipykernel" },
     { name = "ipywidgets" },
-    { name = "jupyter" },
     { name = "jupyter-book" },
     { name = "matplotlib" },
     { name = "nbconvert" },
@@ -270,9 +270,9 @@ notebooks = [
 requires-dist = [
     { name = "boto3", specifier = ">=1.40.27" },
     { name = "cloudpathlib", specifier = ">=0.21.1" },
-    { name = "ipykernel", marker = "extra == 'notebooks'", specifier = ">=6.29" },
+    { name = "ipykernel", specifier = ">=6.29" },
     { name = "ipywidgets", marker = "extra == 'notebooks'", specifier = ">=8.1" },
-    { name = "jupyter", marker = "extra == 'notebooks'", specifier = ">=1.0" },
+    { name = "jupyter", specifier = ">=1.0" },
     { name = "jupyter-book", marker = "extra == 'notebooks'", specifier = ">=1.0" },
     { name = "matplotlib", marker = "extra == 'notebooks'", specifier = ">=3.8" },
     { name = "nbconvert", marker = "extra == 'notebooks'", specifier = ">=7.10" },

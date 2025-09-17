@@ -3,10 +3,10 @@ cloudpathlib>=0.21.1
 numpy>=2
 pandas>=2.2
 simpleitk>=2.2
-
-[notebooks]
 jupyter>=1.0
 ipykernel>=6.29
+
+[notebooks]
 nbformat>=5.9
 nbconvert>=7.10
 ipywidgets>=8.1
