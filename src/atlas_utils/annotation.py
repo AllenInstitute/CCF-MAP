@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 from dataclasses import dataclass, field
-from typing import Tuple, Union
+from typing import Tuple, Union, List
 import ast
 
 @dataclass
@@ -43,11 +43,33 @@ class Annotation():
         terminology = pd.read_csv(str(terminology_filename))
 
         return Annotation(img=img, npy=npy, terminology=terminology)
-    
-    def get_atlas_label(self,
-                        coordinate: Tuple[Union[int, float], Union[int, float], Union[int, float]],
-                        physical_coordinate: bool = False
-                        ) -> Tuple[str, str]:
+
+    def _coordinate_to_index(
+        self,
+        coordinate: Union[List, Tuple],
+        *,
+        physical_coordinate: bool,
+        neuroglancer_coordinate: bool,
+    ) -> Tuple[int, int, int]:
+        """Convert an input coordinate to an image index (x, y, z)."""
+        size_z = self.img.GetSize()[2]
+        if physical_coordinate:
+            point = [float(c) for c in coordinate]
+            if neuroglancer_coordinate:
+                point[2] += size_z - 2
+            continuous = self.img.TransformPhysicalPointToContinuousIndex(point)
+        else:
+            continuous = [float(c) for c in coordinate]
+            if neuroglancer_coordinate:
+                continuous[2] += size_z - 2
+        return tuple(int(round(c)) for c in continuous)
+
+    def get_atlas_label(
+        self,
+        coordinate: List,
+        physical_coordinate: bool = False,
+        neuroglancer_coordinate: bool = False,
+    ) -> Tuple[str, str]:
         """Return the atlas label (acronym, name) at a coordinate.
 
         Args:
@@ -58,66 +80,71 @@ class Annotation():
         Returns:
             tuple[str, str]: (label_acronym, label_name) for the voxel's annotation value.
         """
-
-        if physical_coordinate is True:
-            coordinate_idx = self.img.TransformPhysicalPointToIndex(tuple(float(n) for n in coordinate))
-            x, y, z = (int(coordinate_idx[0]), int(coordinate_idx[1]), int(coordinate_idx[2]))
-        else:
-            x, y, z = (int(coordinate[0]), int(coordinate[1]), int(coordinate[2]))
-
-        # Convert to NumPy indexing order z, y, x. This is one of the most annoying aspects of this whole enterprise.
-        zyx = (z, y, x)
-        sz, sy, sx = self.npy.shape
-        if not (0 <= zyx[0] < sz and 0 <= zyx[1] < sy and 0 <= zyx[2] < sx): # Check for out of bounds values
+        index = self._coordinate_to_index(
+            coordinate,
+            physical_coordinate=physical_coordinate,
+            neuroglancer_coordinate=neuroglancer_coordinate,
+        )
+        size_x, size_y, size_z = self.img.GetSize()
+        x, y, z = index
+        if not (0 <= x < size_x and 0 <= y < size_y and 0 <= z < size_z):
             raise IndexError("Coordinate out of bounds for annotation volume")
 
-        annotation_value = int(self.npy[zyx])
+        annotation_value = int(self.npy[z, y, x])
         row = self._by_value.loc[annotation_value]
 
-        label_name = row["name"]
-        label_acronym = row["abbreviation"]
+        return str(row["abbreviation"]), str(row["name"])
 
-        return str(label_acronym), str(label_name)
-    
-    def label_csv(self,
-                  input_data: pd.DataFrame,
-                  physical_coordinate: bool = False) -> pd.DataFrame:
+    def label_csv(
+        self,
+        input_data: pd.DataFrame,
+        physical_coordinate: bool = False,
+        neuroglancer_coordinate: bool = False,
+    ) -> pd.DataFrame:
+        """Label input csv with labels from annotation.
 
-        """Label input csv with labels from annotation
-        
-        Args: 
-            input_data: DataFrame containing (x,y,z) coordinates for labeling
+        Args:
+            input_data: DataFrame containing (x,y,z) coordinates for labeling.
         Returns:
-            output_data: DataFrame with acronym and full name labels annotated for each coordinate"""
-
+            output_data: DataFrame with acronym and full name labels annotated for each coordinate.
+        """
         required = {"x", "y", "z"}
         if not required.issubset(input_data.columns):
             missing = required - set(input_data.columns)
             raise ValueError(f"Missing required coordinate columns: {sorted(missing)}")
 
         coords = input_data[["x", "y", "z"]].to_numpy()
+        indices = np.array(
+            [
+                self._coordinate_to_index(
+                    coord,
+                    physical_coordinate=physical_coordinate,
+                    neuroglancer_coordinate=neuroglancer_coordinate,
+                )
+                for coord in coords
+            ],
+            dtype=np.int64,
+        ).reshape(len(coords), 3)
 
-        if physical_coordinate is True:
-            idx = self._physical_to_index_numpy(coords)
-        else:
-            idx = coords.astype(np.int64, copy=False)
+        size_x, size_y, size_z = self.img.GetSize()
+        in_bounds = (
+            (indices[:, 0] >= 0)
+            & (indices[:, 0] < size_x)
+            & (indices[:, 1] >= 0)
+            & (indices[:, 1] < size_y)
+            & (indices[:, 2] >= 0)
+            & (indices[:, 2] < size_z)
+        )
 
-        # Split x,y,z and compute in-bounds mask
-        x = idx[:, 0].astype(np.int64, copy=False)
-        y = idx[:, 1].astype(np.int64, copy=False)
-        z = idx[:, 2].astype(np.int64, copy=False)
-        sz, sy, sx = self.npy.shape
-        in_bounds = (z >= 0) & (y >= 0) & (x >= 0) & (z < sz) & (y < sy) & (x < sx)
-
-        vals = np.full(len(input_data), -1, dtype=np.int64)
+        values = np.full(len(coords), -1, dtype=np.int64)
         if in_bounds.any():
-            vals[in_bounds] = self.npy[z[in_bounds], y[in_bounds], x[in_bounds]].astype(np.int64, copy=False)
+            xs = indices[in_bounds, 0]
+            ys = indices[in_bounds, 1]
+            zs = indices[in_bounds, 2]
+            values[in_bounds] = self.npy[zs, ys, xs]
 
-        # Get labels from _by_value df
-        acronym = self._by_value["abbreviation"]
-        name = self._by_value["name"]
-        acronym = acronym.reindex(vals).fillna("").to_numpy()
-        name = name.reindex(vals).fillna("").to_numpy()
+        acronym = self._by_value["abbreviation"].reindex(values).fillna("").to_numpy()
+        name = self._by_value["name"].reindex(values).fillna("").to_numpy()
 
         out = input_data.copy()
         out["abbreviation"] = acronym
@@ -135,9 +162,9 @@ class Annotation():
         The saved image preserves the spatial metadata of the original annotation.
 
         Args:
-            region_acronym: Abbreviation of the target region (e.g., 'VISp').
+            region_acronym: Abbreviation of the target region (e.g., 'DS', 'Ca').
             terminology_df: DataFrame indexed by 'abbreviation' with columns
-                'annotation_value' and 'descendant_annotation_values' (iterable of ints).
+                'annotation_value' and 'descendant_annotation_values'.
             save_filename: Output filename where the mask will be written.
 
         Returns:
@@ -163,26 +190,6 @@ class Annotation():
 
         save_filename_str = str(Path(save_filename).resolve())
         write_volume_to_file(region_mask, self.img, save_filename_str)
-
-    def _physical_to_index_numpy(self, points: np.ndarray) -> np.ndarray:
-        """Vectorized physical (x,y,z) -> index (x,y,z) conversion.
-
-        Args:
-            points: Array of shape (N, 3) with physical coordinates.
-
-        Returns:
-            np.ndarray: Array of shape (N, 3) with integer voxel indices (x, y, z).
-        """
-        origin = np.asarray(self.img.GetOrigin(), dtype=np.float64)
-        spacing = np.asarray(self.img.GetSpacing(), dtype=np.float64)
-        direction = np.asarray(self.img.GetDirection(), dtype=np.float64).reshape(3, 3)
-
-        # Compute inverse mapping for lookup
-        inv_dir = np.linalg.inv(direction)
-        pts = np.asarray(points, dtype=np.float64)
-        scaled = (pts - origin) / spacing
-        idx = (inv_dir @ scaled.T).T
-        return np.rint(idx).astype(np.int64, copy=False)
 
 
 def sitk_to_npy(image) -> np.ndarray:
