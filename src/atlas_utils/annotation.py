@@ -52,20 +52,18 @@ class Annotation():
         neuroglancer_coordinate: bool,
     ) -> Tuple[int, int, int]:
         """Convert an input coordinate to an image index (x, y, z)."""
-        size_z = self.img.GetSize()[2]
         if physical_coordinate:
             point = [float(c) for c in coordinate]
             if neuroglancer_coordinate:
-                temp_points = point.copy()
-                point[1] = temp_points[2]+250
-                point[2] = -temp_points[1]
-            continuous = self.img.TransformPhysicalPointToContinuousIndex(point)
+                query = [point[0], -point[2], -point[1]]
+                import numpy as np
+                continuous = np.array(self.img.TransformPhysicalPointToIndex(tuple(query)))
+                continuous += np.array([0,6,-5])
+                continuous[1] = -continuous[1]
+            else:
+                continuous = self.img.TransformPhysicalPointToContinuousIndex(point)
         else:
             continuous = [float(c) for c in coordinate]
-            if neuroglancer_coordinate:
-                temp_points = continuous.copy()
-                continuous[1] = temp_points[2]+250
-                continuous[2] = -temp_points[1]
         return tuple(int(round(c)) for c in continuous)
 
     def get_atlas_label(

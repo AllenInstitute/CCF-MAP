@@ -223,5 +223,281 @@
       allNodes.forEach(li => li.style.display = "");
     });
   </script>
+
+<script>
+// === Added function #1: makeSearchBarSticky ===
+function makeSearchBarSticky() {
+  const el = document.getElementById('searchInput');
+  if (!el) return;
+  el.style.position = 'sticky';
+  el.style.top = '0';
+  el.style.zIndex = '1000';
+  el.style.background = '#fff';
+  el.style.padding = el.style.padding || '6px 8px';
+  el.style.boxShadow = '0 1px 0 rgba(0,0,0,0.08)';
+  el.style.marginBottom = el.style.marginBottom || '8px';
+}
+// Call it once after parse; harmless if input is absent.
+document.addEventListener('DOMContentLoaded', makeSearchBarSticky);
+
+// === Added function #2: updated filterTree (overrides earlier definition) ===
+function filterTree(li, query) {
+  // Ensure query is normalized string
+  query = (query || '').toLowerCase().trim();
+
+  // Locate the display text span for this node
+  const textSpan = li.querySelector('.node span:last-child');
+  const labelText = (textSpan?.textContent || '').toLowerCase();
+  const nodeMatches = query && labelText.includes(query);
+
+  // Evaluate children
+  const childUl = li.querySelector(':scope > ul');
+  let childMatches = false;
+  if (childUl) {
+    Array.from(childUl.children).forEach(childLi => {
+      if (filterTree(childLi, query)) childMatches = true;
+    });
+  }
+
+  // helper: set collapsed UI state + icon
+  const setCollapsed = (elt, collapsed) => {
+    elt.classList.toggle('collapsed', collapsed);
+    const icon = elt.querySelector(':scope > .node .toggle-icon');
+    if (icon) icon.textContent = collapsed ? '▶' : '▼';
+  };
+
+  if (nodeMatches) {
+    // Show node, collapse its descendants by default,
+    // and allow toggling by clicking the matched text
+    li.style.display = '';
+    setCollapsed(li, !!childUl);
+
+    if (textSpan && !textSpan.dataset.hombaToggleBound) {
+      textSpan.style.cursor = 'pointer';
+      textSpan.style.textDecoration = 'underline dotted';
+      textSpan.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const currentlyCollapsed = li.classList.contains('collapsed');
+        setCollapsed(li, !currentlyCollapsed);
+      });
+      textSpan.dataset.hombaToggleBound = '1';
+    }
+    return true;
+  }
+
+  if (childMatches) {
+    // Keep ancestors of matches visible but collapsed by default
+    li.style.display = '';
+    setCollapsed(li, !!childUl);
+    return true;
+  }
+
+  // Hide non-matching branches entirely
+  li.style.display = 'none';
+  return false;
+}
+</script>
+
+
+<script>
+// === Override filterTree again to fix expand/collapse semantics ===
+function filterTree(li, query) {
+  query = (query || '').toLowerCase().trim();
+
+  // helpers
+  const setCollapsed = (elt, collapsed) => {
+    elt.classList.toggle('collapsed', collapsed);
+    const icon = elt.querySelector(':scope > .node .toggle-icon');
+    if (icon) icon.textContent = collapsed ? '▶' : '▼';
+  };
+  const setExpanded = (elt) => setCollapsed(elt, false);
+
+  // node basics
+  const textSpan = li.querySelector('.node span:last-child');
+  const labelText = (textSpan?.textContent || '').toLowerCase();
+  const nodeMatches = !!query && labelText.includes(query);
+
+  // evaluate children
+  const childUl = li.querySelector(':scope > ul');
+  let childMatches = false;
+  if (childUl) {
+    Array.from(childUl.children).forEach(childLi => {
+      if (filterTree(childLi, query)) childMatches = true;
+    });
+  }
+
+  if (nodeMatches) {
+    // Show this node
+    li.style.display = '';
+
+    // Matched node: collapse itself by default (children hidden until user expands)
+    if (childUl) setCollapsed(li, true); else setCollapsed(li, false);
+
+    // Bind click on label for toggling descendants
+    if (textSpan && !textSpan.dataset.hombaToggleBoundV2) {
+      textSpan.style.cursor = 'pointer';
+      textSpan.style.textDecoration = 'underline dotted';
+      textSpan.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const collapsed = li.classList.contains('collapsed');
+        setCollapsed(li, !collapsed);
+      });
+      textSpan.dataset.hombaToggleBoundV2 = '1';
+    }
+
+    return true;
+  }
+
+  if (childMatches) {
+    // An ancestor of a match: keep visible and EXPANDED to reveal the path
+    li.style.display = '';
+    setExpanded(li);
+    return true;
+  }
+
+  // Nothing matched here
+  li.style.display = 'none';
+  return false;
+}
+</script>
+
+
+<script>
+// === Final override: keep descendants of matched node visible (so expanding reveals them) ===
+function filterTree(li, query) {
+  query = (query || '').toLowerCase().trim();
+
+  const setCollapsed = (elt, collapsed) => {
+    elt.classList.toggle('collapsed', collapsed);
+    const icon = elt.querySelector(':scope > .node .toggle-icon');
+    if (icon) icon.textContent = collapsed ? '▶' : '▼';
+  };
+  const setExpanded = (elt) => setCollapsed(elt, false);
+
+  const textSpan = li.querySelector('.node span:last-child');
+  const labelText = (textSpan?.textContent || '').toLowerCase();
+  const nodeMatches = !!query && labelText.includes(query);
+  const childUl = li.querySelector(':scope > ul');
+
+  // If this node matches the query:
+  // - Show it
+  // - Ensure *all descendants* are visible (display:''), so expanding will reveal them
+  // - Collapse this node by default so descendants are hidden until user expands
+  if (nodeMatches) {
+    li.style.display = '';
+    if (childUl) {
+      childUl.querySelectorAll('li').forEach(d => d.style.display = '');
+      setCollapsed(li, true);
+    } else {
+      setCollapsed(li, false);
+    }
+    if (textSpan && !textSpan.dataset.hombaToggleBoundV3) {
+      textSpan.style.cursor = 'pointer';
+      textSpan.style.textDecoration = 'underline dotted';
+      textSpan.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const collapsed = li.classList.contains('collapsed');
+        setCollapsed(li, !collapsed);
+      });
+      textSpan.dataset.hombaToggleBoundV3 = '1';
+    }
+    return true;
+  }
+
+  // Otherwise, evaluate children normally
+  let childMatches = false;
+  if (childUl) {
+    Array.from(childUl.children).forEach(childLi => {
+      if (filterTree(childLi, query)) childMatches = true;
+    });
+  }
+
+  if (childMatches) {
+    // Ancestor of a match: keep visible and expanded to expose the path
+    li.style.display = '';
+    setExpanded(li);
+    return true;
+  }
+
+  // No match in this branch
+  li.style.display = 'none';
+  return false;
+}
+</script>
+
+
+<script>
+// === Override filterTree to clear stale underlines and only mark current matches ===
+function filterTree(li, query) {
+  query = (query || '').toLowerCase().trim();
+
+  const setCollapsed = (elt, collapsed) => {
+    elt.classList.toggle('collapsed', collapsed);
+    const icon = elt.querySelector(':scope > .node .toggle-icon');
+    if (icon) icon.textContent = collapsed ? '▶' : '▼';
+  };
+  const setExpanded = (elt) => setCollapsed(elt, false);
+
+  const textSpan = li.querySelector('.node span:last-child');
+  const labelText = (textSpan?.textContent || '').toLowerCase();
+  const nodeMatches = !!query && labelText.includes(query);
+  const childUl = li.querySelector(':scope > ul');
+
+  // Clear any previous decoration/cursor by default so stale styles don't linger
+  if (textSpan) {
+    textSpan.style.textDecoration = '';
+    textSpan.style.cursor = '';
+  }
+
+  if (nodeMatches) {
+    // Show the matched node
+    li.style.display = '';
+
+    // Collapse its subtree by default (children hidden until user expands)
+    if (childUl) {
+      // Make sure descendants remain displayable (so expansion reveals them)
+      childUl.querySelectorAll('li').forEach(d => d.style.display = '');
+      setCollapsed(li, true);
+    } else {
+      setCollapsed(li, false);
+    }
+
+    // Mark current match with dotted underline and click-to-toggle
+    if (textSpan) {
+      textSpan.style.cursor = 'pointer';
+      textSpan.style.textDecoration = 'underline dotted';
+      if (!textSpan.dataset.hombaToggleBoundV3) {
+        textSpan.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const collapsed = li.classList.contains('collapsed');
+          setCollapsed(li, !collapsed);
+        });
+        textSpan.dataset.hombaToggleBoundV3 = '1';
+      }
+    }
+    return true;
+  }
+
+  // Otherwise, evaluate children
+  let childMatches = false;
+  if (childUl) {
+    Array.from(childUl.children).forEach(childLi => {
+      if (filterTree(childLi, query)) childMatches = true;
+    });
+  }
+
+  if (childMatches) {
+    // Ancestor of a match: keep visible and expanded, no underline
+    li.style.display = '';
+    setExpanded(li);
+    return true;
+  }
+
+  // No match in this branch
+  li.style.display = 'none';
+  return false;
+}
+</script>
+
 </body>
 </html>
