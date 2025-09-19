@@ -56,12 +56,16 @@ class Annotation():
         if physical_coordinate:
             point = [float(c) for c in coordinate]
             if neuroglancer_coordinate:
-                point[2] += size_z - 2
+                temp_points = point.copy()
+                point[1] = temp_points[2]+250
+                point[2] = -temp_points[1]
             continuous = self.img.TransformPhysicalPointToContinuousIndex(point)
         else:
             continuous = [float(c) for c in coordinate]
             if neuroglancer_coordinate:
-                continuous[2] += size_z - 2
+                temp_points = continuous.copy()
+                continuous[1] = temp_points[2]+250
+                continuous[2] = -temp_points[1]
         return tuple(int(round(c)) for c in continuous)
 
     def get_atlas_label(
