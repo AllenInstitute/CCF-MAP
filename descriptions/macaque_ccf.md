@@ -1,6 +1,10 @@
 ## Macaque
 
-This atlas uses the Mac25 Rhesus template, which is an averaged template from 25 *M. mulatta* individual brains resampled to 160 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**.  
+This three-dimensional brain reference atlas for macaque basal ganglia was created based on the annotation of BG structures on the Mac25Rhesus template, an 
+averaged MRI template from 25 M. mulatta individual brains resampled to 160 um<sup>3</sup> voxel resolution. Brain regions were annotated using the terms set from the 
+Harmonized Ontology of Mammalian Brain Anatomy (HOMBA), a unified cross-species ontology. The atlas also includes selected published subcortical parcellations to aid in 
+comparing across parcellation schemes. This atlas enables mapping of samples and integration of multimodal data within and across species. This reference atlas is a 
+foundational element for coordinated studies of basal ganglia in the BICAN consortium
 
 ###### [View macaque CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/macaque/HMBA-10X-Multiome-BG-MacaqueSlabROI/20250630/viewer_state/macaque_roi_pins_ccf.json)
 

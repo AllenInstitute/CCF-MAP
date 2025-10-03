@@ -147,7 +147,7 @@ def download_atlas(
         species: str, 
         version: str = 2025):
 
-    if species not in ['human', 'macaque', 'marmoset']:
+    if species not in ['human', 'macaque', 'marmoset', 'all']:
        raise RuntimeError(f"Species should be one of 'human', 'macaque', 'marmoset', or 'all'")
     
     if species == 'all':

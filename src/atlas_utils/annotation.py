@@ -193,6 +193,29 @@ class Annotation():
         save_filename_str = str(Path(save_filename).resolve())
         write_volume_to_file(region_mask, self.img, save_filename_str)
 
+    def get_descendants(self,
+                        region_acronym: str):
+        
+        """Return the name and abbrevation for descendants of a query structure.
+        
+        Args:
+            region_acronym: Abbreviation of the target region (e.g., 'DS')
+            
+        Returns:
+            descendant_acronym: List of descendant acronyms
+            descendant_name: List of descendant names
+        """
+        
+        row = self._by_abbrev.loc[region_acronym]
+        descendant_label_value_str = row["descendant_annotation_values"]
+        descendant_label_values = ast.literal_eval(descendant_label_value_str)
+        
+        descendants = self._by_value.loc[descendant_label_values]
+        descendant_acronym = descendants["abbreviation"].to_list()
+        descendant_name = descendants["name"].to_list()
+        
+        return descendant_acronym, descendant_name
+               
 
 def sitk_to_npy(image) -> np.ndarray:
     """Convert a SimpleITK image to a NumPy array with z, y, x axis order"""

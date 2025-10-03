@@ -1,6 +1,7 @@
 ## Marmoset
 
-This atlas uses the marmoset RIKEN25 template, which is an averaged template from 25 *C. jacchus* individual brains resampled to 70 um<sup>3</sup> voxel resolution. This template is overlaid with basal ganglia **annotations** as defined by the [HOMBA](../docs/HOMBA_ontology_v1.md) **terminology**.  
+The HOMBA Adult Marmoset Basal Ganglia Atlas is a three-dimensional brain reference atlas based on the RIKEN25v1 MRI-derived template, based on an average of 25 C. jacchus brains resampled to 70 um<sup>3</sup> voxel resolution. It provides detailed parcellations of the basal ganglia and associated subcortical structures, annotated using the [Harmonized Ontology of Mammalian Brain Anatomy (HOMBA)](../docs/HOMBA_ontology_v1.md) 
+unified ontology that enables cross-species alignment and interpretation. The atlas also includes selected published subcortical parcellations to aid in comparing across parcellation schemes. As a foundational reference resource for the BICAN consortium, this atlas facilitates registration, integration, and comparative analysis of multimodal datasets across marmoset, macaque, and human brains. It is designed to be updated and refined with new datasets, ensuring its continued relevance for exploring structural homologies and functional relationships across species.
 
 ###### [View marmoset CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/marmoset/HMBA-10X-Multiome-BG-MarmosetSlabROI/20250630/viewer_states/marmoset_roi_pins_ccf.json)
 
