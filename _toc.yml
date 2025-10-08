@@ -17,4 +17,3 @@ parts:
   - caption: RESOURCES
     chapters:
       - file: docs/HOMBA_ontology_v1.md
-      - file: docs/Atlas_organization.md
