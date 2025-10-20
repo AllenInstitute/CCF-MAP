@@ -8,6 +8,7 @@ parts:
   - caption: DATA
     chapters:
       - file: descriptions/human_ccf.md
+      - file: descriptions/human_BG_ccf.md
       - file: descriptions/macaque_ccf.md
       - file: descriptions/marmoset_ccf.md
       - file: descriptions/mouse_ccf.md
