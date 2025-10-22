@@ -6,7 +6,7 @@ Harmonized Ontology of Mammalian Brain Anatomy (HOMBA), a unified cross-species 
 comparing across parcellation schemes. This atlas enables mapping of samples and integration of multimodal data within and across species. This reference atlas is a 
 foundational element for coordinated studies of basal ganglia in the BICAN consortium
 
-###### [View macaque CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/macaque/HMBA-10X-Multiome-BG-MacaqueSlabROI/20250630/viewer_state/macaque_roi_pins_ccf.json)
+###### [View macaque CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/macaque/HMBA-10X-Multiome-BG-MacaqueSlabROI/20250630/viewer_state/macaque_ccf.json)
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
