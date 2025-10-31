@@ -4,7 +4,9 @@ This three-dimensional brain reference atlas for macaque basal ganglia was creat
 averaged MRI template from 25 M. mulatta individual brains resampled to 160 um<sup>3</sup> voxel resolution. Brain regions were annotated using the terms set from the 
 Harmonized Ontology of Mammalian Brain Anatomy (HOMBA), a unified cross-species ontology. The atlas also includes selected published subcortical parcellations to aid in 
 comparing across parcellation schemes. This atlas enables mapping of samples and integration of multimodal data within and across species. This reference atlas is a 
-foundational element for coordinated studies of basal ganglia in the BICAN consortium
+foundational element for coordinated studies of basal ganglia in the BICAN consortium. 
+
+The atlas also contains a supplementary set of parcellations derived from the AFNI macaque [D99](https://doi.org/10.1016/j.neuroimage.2021.118759) and [Subcortical atlas of the Rhesus Macaque (SARM)](https://doi.org/10.1016/j.neuroimage.2021.117996) atlases. Parcellations from these atlases have been relabeled with HOMBA terminology. 
 
 ###### [View macaque CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/macaque/HMBA-10X-Multiome-BG-MacaqueSlabROI/20250630/viewer_state/macaque_ccf.json)
 

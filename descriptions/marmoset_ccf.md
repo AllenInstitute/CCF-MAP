@@ -3,6 +3,8 @@
 The HOMBA Adult Marmoset Basal Ganglia Atlas is a three-dimensional brain reference atlas based on the RIKEN25v1 MRI-derived template, based on an average of 25 C. jacchus brains resampled to 70 um<sup>3</sup> voxel resolution. It provides detailed parcellations of the basal ganglia and associated subcortical structures, annotated using the [Harmonized Ontology of Mammalian Brain Anatomy (HOMBA)](../docs/HOMBA_ontology_v1.md) 
 unified ontology that enables cross-species alignment and interpretation. The atlas also includes selected published subcortical parcellations to aid in comparing across parcellation schemes. As a foundational reference resource for the BICAN consortium, this atlas facilitates registration, integration, and comparative analysis of multimodal datasets across marmoset, macaque, and human brains. It is designed to be updated and refined with new datasets, ensuring its continued relevance for exploring structural homologies and functional relationships across species.
 
+The atlas also contains a supplementary set of parcellations derived from the AFNI marmoset [Subcortical Atlas of the Marmoset (SAM)](https://doi.org/10.1093/cercor/bhae120) atlas. Parcellations from these atlases have been relabeled with HOMBA terminology. 
+
 ###### [View marmoset CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/marmoset/HMBA-10X-Multiome-BG-MarmosetSlabROI/20250630/viewer_states/marmoset_ccf.json)
 
 | Data asset                      | S3 location                                                                                                                                            |
