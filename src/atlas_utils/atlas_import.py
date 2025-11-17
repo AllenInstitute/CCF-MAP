@@ -147,16 +147,21 @@ def download_atlas(
         species: str, 
         version: str = 2025):
 
-    if species not in ['human', 'macaque', 'marmoset', 'all']:
+    if species not in ['human-mni', 'human-hcp', 'macaque', 'marmoset', 'all']:
        raise RuntimeError(f"Species should be one of 'human', 'macaque', 'marmoset', or 'all'")
     
     if species == 'all':
-        species_set = ['human', 'macaque', 'marmoset']
+        species_set = ['human-mni', 'human-hcp', 'macaque', 'marmoset']
     else:
         species_set = [species]
 
     for _species in species_set:
-        manifest_filename = f"./data/atlases/hmba-adult-{_species}-homba-atlas/{version}/manifest.json"
+        if _species == 'human-hcp':
+            manifest_filename = f"./data/atlases/hmba-adult-human-hombabg-atlas/{version}/manifest.json"
+        elif _species == 'human-mni':
+            manifest_filename = f"./data/atlases/hmba-adult-human-homba-atlas/{version}/manifest.json"
+        else:
+            manifest_filename = f"./data/atlases/hmba-adult-{_species}-homba-atlas/{version}/manifest.json"
         with open(manifest_filename) as f:
             manifest_dict = json.load(f)
         manifest = AtlasManifest.from_dict(manifest_dict)

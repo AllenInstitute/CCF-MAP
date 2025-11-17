@@ -11,7 +11,7 @@ The human whole brain atlas is split into two sets, gyral and Brodmann. The anno
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| HCP template                    | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/templates/hmba-adult-human-icbm2009b-template/2025/template_500.nii.gz      |
+| MNI ICBM2009b template                    | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/templates/hmba-adult-human-icbm2009b-template/2025/template_500.nii.gz      |
 | Gyral annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-human-hombagyral-annotation/2025/annotations_compressed_500.nii.gz                               |
 | Brodmann annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-human-hombabrodmann-annotation/2025/annotations_compressed_500.nii.gz                               |
 

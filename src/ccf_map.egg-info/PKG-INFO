@@ -17,7 +17,7 @@ Requires-Dist: nbconvert>=7.10; extra == "notebooks"
 Requires-Dist: ipywidgets>=8.1; extra == "notebooks"
 Requires-Dist: matplotlib>=3.8; extra == "notebooks"
 Requires-Dist: seaborn>=0.13; extra == "notebooks"
-Requires-Dist: jupyter-book>=1.0; extra == "notebooks"
+Requires-Dist: jupyter-book==1.0.4.post1; extra == "notebooks"
 
 # Common Coordinate Framework and Multi-Species Atlas Primer (CCF-MAP)
 
