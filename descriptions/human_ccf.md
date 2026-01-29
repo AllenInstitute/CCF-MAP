@@ -1,6 +1,6 @@
-## Human whole brain
+## HMBA Adult Human Brain Atlas
 
-The HOMBA Adult Human Basal Ganglia Atlas is a three-dimensional (3D) common coordinate framework (CCF) and reference atlas that defines the spatial organization 
+The HMBA Adult Human Brain Atlas is a three-dimensional (3D) common coordinate framework (CCF) and reference atlas that defines the spatial organization 
 of the basal ganglia of the adult human brain. This atlas uses the [MNI152 ICBM2009b symmetric template](https://nist.mni.mcgill.ca/icbm-152-nonlinear-atlases-2009/), which is an averaged template from 152 young adult brains (mean age: 25.02 years, range: 18-44 years, 86 male, 66 female). This template has been sampled to 500 um<sup>3</sup> voxel resolution and symmetrized along the right-left axis. 
 
 This atlas includes annotations for all subcortical cortical structures using a unified ontology developed for cross-species comparisons, the [Harmonized Ontology of the Mammalian Brain Anatomy (HOMBA)](../docs/HOMBA_ontology_v1.md). HOMBA serves as a reference framework for aligning multimodal datasets, including transcriptomics and connectomics. The resource supports data registration, integration, and interpretation across individuals, laboratories, and species, and is designed to be iteratively refined with new data to capture individual variability and emerging anatomical detail as part of the BRAIN Initiative Cell Atlas Network.

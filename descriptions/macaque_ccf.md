@@ -1,7 +1,7 @@
-## Macaque
+## HMBA Adult Rhesus Macaque Brain Atlas
 
 This three-dimensional brain reference atlas for macaque basal ganglia was created based on the annotation of BG structures on the Mac25Rhesus template, an 
-averaged MRI template from 25 M. mulatta individual brains resampled to 160 um<sup>3</sup> voxel resolution. Brain regions were annotated using the terms set from the 
+averaged MRI template from 25 rhesus macaque (*M. mulatta*) individual brains resampled to 160 um<sup>3</sup> voxel resolution. Brain regions were annotated using the terms set from the 
 Harmonized Ontology of Mammalian Brain Anatomy (HOMBA), a unified cross-species ontology. The atlas also includes selected published subcortical parcellations to aid in 
 comparing across parcellation schemes. This atlas enables mapping of samples and integration of multimodal data within and across species. This reference atlas is a 
 foundational element for coordinated studies of basal ganglia in the BICAN consortium. 
