@@ -1,4 +1,4 @@
-## Developing Human Brain Atlas (DHBA) version 2 (DHBAv2)
+## Developing Human Brain Atlas, version 2 (DHBAv2)
 
 The Developing Human Brain Atlas version 2 (DHBAv2) is a three-dimensional (3D) common coordinate framework (CCF) and reference atlas that defines the spatial organization 
 of cortical and subcortical structures in the adult human brain. This atlas modifies and expands the [Allen Human Reference atlas (2020)](https://community.brain-map.org/t/allen-human-reference-atlas-3d-2020-new/405). This atlas parcellates the [MNI152 ICBM2009b symmetric template](https://nist.mni.mcgill.ca/icbm-152-nonlinear-atlases-2009/), an averaged template from 152 young adult brains (mean age: 25.02 years, range: 18-44 years, 86 male, 66 female). The template has been sampled to 500 um<sup>3</sup> voxel resolution and symmetrized along the right-left axis. 
