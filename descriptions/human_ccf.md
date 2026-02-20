@@ -7,13 +7,13 @@ This atlas includes annotations for all subcortical and cortical structures usin
 
 The DHBAv2 whole brain atlas is split into two sets, gyral and Brodmann. The annotation sets share the same subcortical parcellations, but the cerebral cortex is parcellated into a gyral annotation set and a modified Brodmann area set using criteria and boundaries derived from [Ding et al. 2016](https://doi.org/10.1002/cne.24080)
 
-###### [View human CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/human/HMBA-10X-Multiome-BG-HumanSlabROI/20250630/viewer_state/human_ccf_whole_brain.json)
+###### [View human CCF neuroglancer visualization](https://neuroglancer--pr876-5on344ws.web.app//#!s3://allen-hmba-releases/neuroglancer/human/HMBA-10X-Multiome-BG-HumanSlabROI/20250630/viewer_state/human_ccf_whole_brain.json)
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MNI ICBM2009b template                    | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/templates/hmba-adult-human-icbm2009b-template/2025/template_500.nii.gz      |
-| Gyral annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-human-hombagyral-annotation/2025/annotations_compressed_500.nii.gz                               |
-| Brodmann annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-human-hombabrodmann-annotation/2025/annotations_compressed_500.nii.gz                               |
+| Gyral annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-human-dhbav2gyral-annotation/2025/annotations_compressed_500.nii.gz                               |
+| Brodmann annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-human-dhbav2brodmann-annotation/2025/annotations_compressed_500.nii.gz                               |
 
 #### Related notebooks
 

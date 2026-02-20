@@ -8,7 +8,7 @@ foundational element for coordinated studies of basal ganglia in the BICAN conso
 
 The atlas also contains a supplementary set of parcellations derived from the AFNI macaque [D99](https://doi.org/10.1016/j.neuroimage.2021.118759) and [Subcortical atlas of the Rhesus Macaque (SARM)](https://doi.org/10.1016/j.neuroimage.2021.117996) atlases. Parcellations from these atlases have been relabeled with HOMBA terminology. 
 
-###### [View macaque CCF neuroglancer visualization](https://neuroglancer-demo.appspot.com/#!s3://allen-hmba-releases/neuroglancer/macaque/HMBA-10X-Multiome-BG-MacaqueSlabROI/20250630/viewer_state/macaque_ccf.json)
+###### [View macaque CCF neuroglancer visualization](https://neuroglancer--pr876-5on344ws.web.app/#!s3://allen-hmba-releases/neuroglancer/macaque/HMBA-10X-Multiome-BG-MacaqueSlabROI/20250630/viewer_state/macaque_ccf.json)
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
