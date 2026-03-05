@@ -7,7 +7,7 @@ This atlas includes annotations for all subcortical and cortical structures usin
 
 The DHBAv2 whole brain atlas is split into two sets, gyral and Brodmann. The annotation sets share the same subcortical parcellations, but the cerebral cortex is parcellated into a gyral annotation set and a modified Brodmann area set using criteria and boundaries derived from [Ding et al. 2016](https://doi.org/10.1002/cne.24080)
 
-###### [View human CCF neuroglancer visualization](https://neuroglancer--pr876-5on344ws.web.app//#!s3://allen-hmba-releases/neuroglancer/human/HMBA-10X-Multiome-BG-HumanSlabROI/20250630/viewer_state/human_ccf_whole_brain.json)
+###### [View human CCF neuroglancer visualization](https://allen.neuroglass.io/studies/069a9c30-2708-7005-8000-87d013f5e9f4)
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
