@@ -12,8 +12,8 @@ The atlas also contains a supplementary set of parcellations derived from the AF
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mac25 Rhesus template           | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/templates/hmba-adult-macaque-mri-template/2025/template_160.nii.gz      |
-| Annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-macaque-homba-annotation/2025/annotations_compressed_160.nii.gz                               |
+| Mac25 Rhesus template           | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/templates/hmba-adult-rhesusmacaque-mri-template/2025/template_160.nii.gz      |
+| Annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-rhesusmacaque-homba-annotation/2025/annotations_compressed_160.nii.gz                               |
 
 #### Related notebooks
 

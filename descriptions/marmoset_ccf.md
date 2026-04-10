@@ -10,7 +10,7 @@ The atlas also contains a supplementary set of parcellations derived from the AF
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | RIKEN25 template                | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/templates/hmba-adult-marmoset-mri-template/2025/template_70.nii.gz      |
-| Annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-marmoset-homba-annotation/2025/annotations_compressed_70.nii.gz                               |
+| HOMBA BG Annotation                      | https://allen-atlas-assets.s3.us-west-2.amazonaws.com/annotation-sets/hmba-adult-marmoset-homba-annotation/2025/annotations_compressed_70.nii.gz                               |
 
 #### Related notebooks
 
