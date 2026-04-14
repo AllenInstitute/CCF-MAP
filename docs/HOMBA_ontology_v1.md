@@ -13,5 +13,5 @@ The Harmonized Ontology of Mammalian Brain Anatomy (HOMBA) is a harmonized cross
 
 #### Offline Access
 
-- The HOMBA ontology is available for offline access as a csv. This csv also contains columns for mapping HOMBA to DHBA values. [Download here](../_static/HOMBA_v1_WORKING.csv)
+- The HOMBA ontology is available for offline access in [**csv**](../_static/HOMBA_v1_WORKING.csv) and [**json**](../_static/HOMBA_v1_ontology.json) formats. The csv also contains columns for mapping HOMBA to DHBA values.
 
