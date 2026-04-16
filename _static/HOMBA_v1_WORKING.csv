@@ -1158,12 +1158,12 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1156,HOMBA:AA30422,CV10,"flocculonodular lobe, vermis part (lobule X-nodulus)",1449,,,,0,128,128,HOMBA:12852
 1157,HOMBA:AA30423,CH10,"flocculonodular lobe, flocculus part",1450,,,,60,180,75,HOMBA:12852
 1158,HOMBA:AA30424,CH10a,lobule Xa (flocculus),1451,,,,220,190,255,HOMBA:AA30423
-1159,HOMBA:AA30425,CH10b,accessory flocculus,1452,,,,60,180,75,HOMBA:AA30423
-1160,HOMBA:AA30426,CbL,layers of cerebellar cortex,1453,,,,255,225,25,HOMBA:AA30425
+1159,HOMBA:AA30425,CH10b,Lobule Xb (accessory paraflocculus),1452,,,,60,180,75,HOMBA:AA30423
+1160,HOMBA:AA30426,CbL,layers of cerebellar cortex,1453,,,,255,225,25,HOMBA:10657
 1161,HOMBA:AA30427,CbL1,molecular layer of cerebellar cortex,1454,,,,70,240,240,HOMBA:AA30426
 1162,HOMBA:AA30428,CbL2,Purkinje cell layer of cerebellar cortex,1455,,,,210,245,60,HOMBA:AA30426
 1163,HOMBA:AA30429,CbL3,granular cell layer of cerebellar cortex,1456,,,,240,50,230,HOMBA:AA30426
-1164,HOMBA:10660,CbDN,cerebellar deep nuclei,395,cerebellar deep nuclei,CbDN,10660,30,147,205,HOMBA:AA30425
+1164,HOMBA:10660,CbDN,cerebellar deep nuclei,395,cerebellar deep nuclei,CbDN,10660,30,147,205,HOMBA:10656
 1165,HOMBA:12396,DT,dentate (lateral) nucleus,396,dentate (lateral) nucleus,DT,12396,208,76,181,HOMBA:10660
 1166,HOMBA:12397,DTlv,"dentate nucleus, lateroventral division",1457,"dentate nucleus, lateroventral part",DTlv,12397,255,225,25,HOMBA:12396
 1167,HOMBA:12398,DTmd,"dentate nucleus, mediodorsal division",1458,"dentate nucleus, mediodorsal part",DTmd,12398,230,25,75,HOMBA:12396
@@ -1174,7 +1174,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1172,HOMBA:12404,FASm,"fastigial nucleus, medial division",1461,"fastigial nucleus, medial part",FasM,12404,210,245,60,HOMBA:12402
 1173,HOMBA:12403,FASl,"fastigial nucleus, lateral division",1462,"fastigial nucleus, lateral part",FasL,12403,0,130,200,HOMBA:12402
 1174,HOMBA:267499207,BIcb,basal interstitial nucleus of cerebellum,1463,basal interstitial nucleus of cerebellum,BIcb,267499207,240,50,230,HOMBA:10660
-1175,HOMBA:10661,Pn,pons,399,pons,Pn,10661,29,0,139,HOMBA:AA30425
+1175,HOMBA:10661,Pn,pons,399,pons,Pn,10661,29,0,139,HOMBA:10655
 1176,HOMBA:12405,PnBa,basilar part of pons,400,basilar part of pons,PnBa,12405,227,145,164,HOMBA:10661
 1177,HOMBA:12406,PN,pontine nucleus,401,pontine nucleus,PN,12406,210,192,155,HOMBA:12405
 1178,HOMBA:12407,PNd,dorsal part of pontine nucleus,1465,dorsal nucleus,PNd,12407,128,0,0,HOMBA:12406
@@ -1322,7 +1322,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1320,HOMBA:12528,PnBi,"pontobulbar nucleus, inferior division",1580,"pontobulbar nucleus, inferior part",PnBi,12528,250,190,212,HOMBA:AA30448
 1321,HOMBA:12534,VLTg,ventrolateral tegmental nucleus,1581,ventrolateral tegmental nucleus,VLTg,12534,70,240,240,HOMBA:AA30448
 1322,HOMBA:AA30450,PnX,uncharted (diffuse) region in pontine tegmentum,1582,,,,230,25,75,HOMBA:12416
-1323,HOMBA:10662,Mo,myelencephalon (medulla oblongata),434,myelencephalon (medulla oblongata),Mo,10662,73,146,3,HOMBA:AA30425
+1323,HOMBA:10662,Mo,myelencephalon (medulla oblongata),434,myelencephalon (medulla oblongata),Mo,10662,73,146,3,HOMBA:AA30377
 1324,HOMBA:12535,MoPy,pyramidal part of medulla oblongata,435,pyramidal part of medulla oblongata,MoPy,12535,187,157,188,HOMBA:10662
 1325,HOMBA:12536,ArMo,arcuate nucleus of medulla oblongata,1583,arcuate nucleus of medulla oblongata,Ar,12536,128,128,0,HOMBA:12535
 1326,HOMBA:12537,Ct,conterminal nucleus of medulla,1584,conterminal nucleus,Ct,12537,0,130,200,HOMBA:12535
@@ -1457,7 +1457,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1455,HOMBA:146034978,NPRa,nucleus pararaphales,1688,nucleus pararaphales,NPRa,146034978,220,190,255,HOMBA:12641
 1456,HOMBA:12496,PMn,paramedian reticular nucleus,1689,paramedian reticular nucleus,PMn,12496,240,50,230,HOMBA:12641
 1457,HOMBA:AA30461,MoX,uncharted (diffuse) region in medulla tegmentum,1690,,,,255,225,25,HOMBA:12538
-1458,HOMBA:AA30462,HBDe,developing transient structures of hindbrain,1691,,,,245,130,48,HOMBA:AA30425
+1458,HOMBA:AA30462,HBDe,developing transient structures of hindbrain,1691,,,,245,130,48,HOMBA:10653
 1459,HOMBA:AA30463,CBDe,developing transient structures of cerebellum,1692,,,,245,130,48,HOMBA:AA30462
 1460,HOMBA:12665,RhIS,rhombencephalic isthmus (isthmus organizer),1693,rhombencephalic isthmus,RhIS,12665,240,50,230,HOMBA:AA30463
 1461,HOMBA:12698,CbP,early cerebellar plate,1694,cerebellar plate,CbP,12698,60,180,75,HOMBA:AA30463
@@ -1519,7 +1519,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1517,HOMBA:12678,VZH,ventricular (matrix) zone of lower brainstem,1750,ventricular (matrix) zone in hindbrain,VZH,12678,128,0,0,HOMBA:AA30472
 1518,HOMBA:12726,PnbB,pontobulbar body,1751,pontobulbar body,PnbB,12726,240,50,230,HOMBA:AA30470
 1519,HOMBA:12727,RhGv,rhombic grooves,1752,rhombic grooves,RhGv,12727,60,180,75,HOMBA:AA30470
-1520,HOMBA:266441451,BV,ventricles of the brain,1753,basoventral nucleus,BV,266441451,70,240,240,HOMBA:AA30425
+1520,HOMBA:266441451,BV,ventricles of the brain,1753,basoventral nucleus,BV,266441451,70,240,240,HOMBA:10155
 1521,HOMBA:10595,FV,ventricles of forebrain,256,ventricles of forebrain,FV,10595,229,128,186,HOMBA:266441451
 1522,HOMBA:10596,LV,lateral ventricles,257,lateral ventricles,LV,10596,71,0,134,HOMBA:10595
 1523,HOMBA:AA30473,LVR,regions of lateral ventricles,1754,,,,255,250,200,HOMBA:10596
@@ -1573,7 +1573,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1571,HOMBA:12824,Tae,taenia cinerea,2421,taenia cinerea,Tae,12824,255,250,200,HOMBA:12810
 1572,HOMBA:12825,10Tr,vagal trigone,2422,vagal trigone,10Tr,12825,170,255,195,HOMBA:12810
 1573,HOMBA:12826,cec,central canal of medulla oblongata,483,central canal of medulla oblongata,cec,12826,3,237,189,HOMBA:10669
-1574,HOMBA:AA30482,wm,white matter of brain,1773,,,,210,245,60,HOMBA:AA30425
+1574,HOMBA:AA30482,wm,white matter of brain,1773,,,,210,245,60,HOMBA:10155
 1575,HOMBA:AA30483,wmco,commissural (crossed) white matter bundles,1774,,,,0,130,200,HOMBA:AA30482
 1576,HOMBA:10559,ac,anterior commissure,222,anterior commissure,ac,10559,107,154,17,HOMBA:AA30483
 1577,HOMBA:AA30484,acr,rostral (anterior) branch of anterior commissure,1775,,,,70,240,240,HOMBA:10559
@@ -1826,7 +1826,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1824,HOMBA:AA30496,vof,vertical occipital fasciculus,1964,,,,128,0,0,HOMBA:AA30492
 1825,HOMBA:12804,veme,vestibulomesencephalic tract,1965,vestibulomesencephalic tract,veme,12804,60,180,75,HOMBA:AA30492
 1826,HOMBA:AA30497,vn,vomeronasal nerve,1966,,,,255,225,25,HOMBA:AA30492
-1827,HOMBA:AA30498,BrSS,surface structures (landmarks) of brain,1968,,,,245,130,48,HOMBA:AA30425
+1827,HOMBA:AA30498,BrSS,surface structures (landmarks) of brain,1968,,,,245,130,48,HOMBA:10155
 1828,HOMBA:10609,FBSS,surface structures (landmarks) of forebrain,271,surface structures of forebrain,FSS,10609,170,110,40,HOMBA:AA30498
 1829,HOMBA:10610,ces,cerebral sulci,272,cerebral sulci,CeS,10610,230,25,75,HOMBA:10609
 1830,HOMBA:AA30791,bs,basic sulci,1969,,,,210,245,60,HOMBA:10610
@@ -2097,7 +2097,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 2095,HOMBA:12887,r9,root of glossopharyngeal nerve,2096,root of glossopharyngeal nerve,r9,12887,230,25,75,HOMBA:12872
 2096,HOMBA:12888,r10,root of vagus nerve,2097,root of vagus nerve,r10,12888,250,190,212,HOMBA:12872
 2097,HOMBA:12889,vmms,ventral (anterior) median medullary sulcus,2098,ventral (anterior) median medullary sulcus,vmms,12889,128,0,0,HOMBA:12872
-2098,HOMBA:AA30784,BrBV,blood vessles of brain,2333,,,,230,25,75,HOMBA:AA30425
+2098,HOMBA:AA30784,BrBV,blood vessles of brain,2333,,,,230,25,75,HOMBA:10155
 2099,HOMBA:AA30785,ICA,internal carotid artery system,2334,,,,60,180,75,HOMBA:AA30784
 2100,HOMBA:AA30786,VBA,vertebral-basilar artery system,2335,,,,255,250,200,HOMBA:AA30784
 2101,HOMBA:AA30804,VSB,vein system of brain,2349,,,,0,128,128,HOMBA:AA30784
