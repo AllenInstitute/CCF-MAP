@@ -1158,7 +1158,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1156,HOMBA:AA30422,CV10,"flocculonodular lobe, vermis part (lobule X-nodulus)",1449,,,,0,128,128,HOMBA:12852
 1157,HOMBA:AA30423,CH10,"flocculonodular lobe, flocculus part",1450,,,,60,180,75,HOMBA:12852
 1158,HOMBA:AA30424,CH10a,lobule Xa (flocculus),1451,,,,220,190,255,HOMBA:AA30423
-1159,HOMBA:AA30425,CH10b,Lobule Xb (accessory paraflocculus),1452,,,,60,180,75,HOMBA:AA30423
+1159,HOMBA:AA30425,CH10b,Lobule Xb (accessory flocculus),1452,,,,60,180,75,HOMBA:AA30423
 1160,HOMBA:AA30426,CbL,layers of cerebellar cortex,1453,,,,255,225,25,HOMBA:10657
 1161,HOMBA:AA30427,CbL1,molecular layer of cerebellar cortex,1454,,,,70,240,240,HOMBA:AA30426
 1162,HOMBA:AA30428,CbL2,Purkinje cell layer of cerebellar cortex,1455,,,,210,245,60,HOMBA:AA30426
