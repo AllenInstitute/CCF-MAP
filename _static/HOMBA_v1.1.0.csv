@@ -508,7 +508,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 506,HOMBA:AA30201,IPACl,Lateral part of IPAC,943,,,,170,255,195,HOMBA:10388
 507,HOMBA:146034754,PuCv,ventral subdivision of PuC,127,posteroventral putamen,PuPV,146034754,123,171,136,HOMBA:AA30898
 508,HOMBA:10381,AStr,amygdalostriatal transition area,112,amygdalostriatal transition area,ASTA,10381,220,190,255,HOMBA:AA30898
-509,HOMBA:AA30194,CaTv,ventral subdivision of CaT,921,,,,70,240,240,HOMBA:10337
+509,HOMBA:AA30194,CaTv,ventral subdivision of CaT,921,,,,70,240,240,HOMBA:AA30898
 510,HOMBA:AA30202,STRcp,compartments of striatum,944,,,,128,0,0,HOMBA:10333
 511,HOMBA:AA30867,STRdc,dorsal compartment of the striatum,2454,,,,250,190,212,HOMBA:AA30202
 512,HOMBA:AA30203,STRs,striosome (patches) of the striatum,945,,,,128,128,0,HOMBA:AA30867
