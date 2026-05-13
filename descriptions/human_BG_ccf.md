@@ -5,7 +5,7 @@ of the basal ganglia of the adult human brain. This atlas uses the [HCP template
 
 The following atlas visualization also contains harmonized subcortical annotations from the [DHBAv2 annotation set](./human_ccf.md). Subcortical parcellations have been registered to the HCP template but have not been manually corrected. These annotations are presented as a visual reference and will be edited for a later release.
 
-###### [View human CCF neuroglancer visualization](https://allen.neuroglass.io/glances/069d92c7-e7ee-74fa-8000-72d69793acd0)
+###### [View human CCF neuroglancer visualization](https://allen.neuroglass.io/glances/069f91e2-9465-745e-8000-09d580ba4922)
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|

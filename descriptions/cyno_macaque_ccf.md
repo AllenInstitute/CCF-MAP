@@ -2,7 +2,7 @@
 
 This three-dimensional brain reference atlas for macaque basal ganglia was created based on the Mac25Cyno template, an averaged MRI template from 25 cynomolgus macaque (*M. cynomolgus*) individual brains resampled to 160 um<sup>3</sup> voxel resolution. Brain regions were annotated on a 2D histology series using the terms set from the Harmonized Ontology of Mammalian Brain Anatomy (HOMBA), a unified cross-species ontology. 2D labeled histology sections were registered to the Mac25Cyno template and labels were transferred to 3D space. This atlas enables mapping of samples and integration of multimodal data within and across species. This reference atlas is a foundational element for coordinated studies of basal ganglia in the BICAN consortium. 
 
-###### [View cynomolgus macaque CCF neuroglancer visualization](https://allen.neuroglass.io/glances/069d98a0-ada9-753f-8000-5e20a520b335)
+###### [View cynomolgus macaque CCF neuroglancer visualization](https://allen.neuroglass.io/glances/069f9213-dcfc-70c2-8000-25b55c1a4735)
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
