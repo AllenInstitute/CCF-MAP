@@ -1,4 +1,4 @@
-{
+[{
     "graph_order": 0,
     "acronym": "CNS",
     "HOMBA_id": "HOMBA:10154",
@@ -4278,7 +4278,7 @@
                                                                                                     "graph_order": 494,
                                                                                                     "HOMBA_id": "HOMBA:10358",
                                                                                                     "HOMBA_label": 146,
-                                                                                                    "acronym": "IsCj",
+                                                                                                    "acronym": "ICj",
                                                                                                     "color": "#f032e6",
                                                                                                     "name": "islands of Calleja near the shell",
                                                                                                     "children": [
@@ -4286,7 +4286,7 @@
                                                                                                             "graph_order": 495,
                                                                                                             "HOMBA_id": "HOMBA:10359",
                                                                                                             "HOMBA_label": 935,
-                                                                                                            "acronym": "IsCjm",
+                                                                                                            "acronym": "ICjm",
                                                                                                             "color": "#f58230",
                                                                                                             "name": "major island of Calleja near the shell"
                                                                                                         },
@@ -4294,7 +4294,7 @@
                                                                                                             "graph_order": 496,
                                                                                                             "HOMBA_id": "HOMBA:10360",
                                                                                                             "HOMBA_label": 938,
-                                                                                                            "acronym": "IsCjs",
+                                                                                                            "acronym": "ICjs",
                                                                                                             "color": "#fabed4",
                                                                                                             "name": "small islands of Calleja near the shell"
                                                                                                         }
@@ -10074,7 +10074,7 @@
                                                                             "graph_order": 1163,
                                                                             "HOMBA_id": "HOMBA:AA30427",
                                                                             "HOMBA_label": 1454,
-                                                                            "acronym": "CbL1",
+                                                                            "acronym": "LI",
                                                                             "color": "#46f0f0",
                                                                             "name": "molecular layer of cerebellar cortex"
                                                                         },
@@ -10082,7 +10082,7 @@
                                                                             "graph_order": 1164,
                                                                             "HOMBA_id": "HOMBA:AA30428",
                                                                             "HOMBA_label": 1455,
-                                                                            "acronym": "CbL2",
+                                                                            "acronym": "LII",
                                                                             "color": "#d2f53c",
                                                                             "name": "Purkinje cell layer of cerebellar cortex"
                                                                         },
@@ -10090,7 +10090,7 @@
                                                                             "graph_order": 1165,
                                                                             "HOMBA_id": "HOMBA:AA30429",
                                                                             "HOMBA_label": 1456,
-                                                                            "acronym": "CbL3",
+                                                                            "acronym": "LIII",
                                                                             "color": "#f032e6",
                                                                             "name": "granular cell layer of cerebellar cortex"
                                                                         }
@@ -20057,4 +20057,12 @@
             ]
         }
     ]
-}
+},
+{
+    "graph_order": 2341,
+    "acronym": "PNS",
+    "HOMBA_id": "HOMBA:AA30775",
+    "HOMBA_label": 2320,
+    "color": "#808080",
+    "name": "peripheral nervous system"
+}]

@@ -493,9 +493,9 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 491,HOMBA:11547,NACsm,medial subdivision of the shell,934,medial portion of the shell,NACsm,11547,210,245,60,HOMBA:10341
 492,HOMBA:AA30865,NACsmd,mediodorsal subdivision of the Shell,2452,,,,128,128,0,HOMBA:10341
 493,HOMBA:AA30831,NACsc,caudal subdivision of the shell,2384,,,,255,250,200,HOMBA:10341
-494,HOMBA:10358,IsCj,islands of Calleja near the shell,146,islands of Calleja,IsCj,10358,240,50,230,HOMBA:10339
-495,HOMBA:10359,IsCjm,major island of Calleja near the shell,935,major island of Calleja,IsCjm,10359,245,130,48,HOMBA:10358
-496,HOMBA:10360,IsCjs,small islands of Calleja near the shell,938,scattered islands of Calleja,IsCjs,10360,250,190,212,HOMBA:10358
+494,HOMBA:10358,ICj,islands of Calleja near the shell,146,islands of Calleja,IsCj,10358,240,50,230,HOMBA:10339
+495,HOMBA:10359,ICjm,major island of Calleja near the shell,935,major island of Calleja,IsCjm,10359,245,130,48,HOMBA:10358
+496,HOMBA:10360,ICjs,small islands of Calleja near the shell,938,scattered islands of Calleja,IsCjs,10360,250,190,212,HOMBA:10358
 497,HOMBA:10310,OT,olfactory tubercle,936,olfactory tubercle,OT,10310,145,30,180,HOMBA:AA30195
 498,HOMBA:AA30196,OTpr,principal part of olfactory tubercle,937,,,,0,0,128,HOMBA:10310
 499,HOMBA:AA30832,OTis,islands of Calleja of olfactory tubercle,2385,,,,255,225,25,HOMBA:10310
@@ -1162,9 +1162,9 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1160,HOMBA:AA30424,CH10a,lobule Xa (flocculus),1451,,,,220,190,255,HOMBA:AA30423
 1161,HOMBA:AA30425,CH10b,Lobule Xb (accessory paraflocculus),1452,,,,60,180,75,HOMBA:AA30423
 1162,HOMBA:AA30426,CbL,layers of cerebellar cortex,1453,,,,255,225,25,HOMBA:10657
-1163,HOMBA:AA30427,CbL1,molecular layer of cerebellar cortex,1454,,,,70,240,240,HOMBA:AA30426
-1164,HOMBA:AA30428,CbL2,Purkinje cell layer of cerebellar cortex,1455,,,,210,245,60,HOMBA:AA30426
-1165,HOMBA:AA30429,CbL3,granular cell layer of cerebellar cortex,1456,,,,240,50,230,HOMBA:AA30426
+1163,HOMBA:AA30427,LI,molecular layer of cerebellar cortex,1454,,,,70,240,240,HOMBA:AA30426
+1164,HOMBA:AA30428,LII,Purkinje cell layer of cerebellar cortex,1455,,,,210,245,60,HOMBA:AA30426
+1165,HOMBA:AA30429,LIII,granular cell layer of cerebellar cortex,1456,,,,240,50,230,HOMBA:AA30426
 1166,HOMBA:10660,CbDN,cerebellar deep nuclei,395,cerebellar deep nuclei,CbDN,10660,30,147,205,HOMBA:10656
 1167,HOMBA:12396,DT,dentate (lateral) nucleus,396,dentate (lateral) nucleus,DT,12396,208,76,181,HOMBA:10660
 1168,HOMBA:12397,DTlv,"dentate nucleus, lateroventral division",1457,"dentate nucleus, lateroventral part",DTlv,12397,255,225,25,HOMBA:12396
