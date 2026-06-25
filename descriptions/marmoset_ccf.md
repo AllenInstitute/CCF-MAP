@@ -5,7 +5,8 @@ unified ontology that enables cross-species alignment and interpretation. The at
 
 The atlas also contains a supplementary set of parcellations derived from the AFNI marmoset [Subcortical Atlas of the Marmoset (SAM)](https://doi.org/10.1093/cercor/bhae120) atlas. Parcellations from these atlases have been relabeled with HOMBA terminology. 
 
-###### [View marmoset CCF neuroglancer visualization](https://allen.neuroglass.io/glances/069f921a-a1c4-7fc2-8000-c5033086d238)
+#### CCF visualization
+[![marmoset visualization](../_static/marmoset_img.png)](https://allen.neuroglass.io/glances/069f921a-a1c4-7fc2-8000-c5033086d238)
 
 | Data asset                      | S3 location                                                                                                                                            |
 |---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
