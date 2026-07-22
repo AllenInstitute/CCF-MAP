@@ -454,8 +454,8 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 452,HOMBA:13077,CalS,callosal sling,911,callosal sling,CalS,13077,210,245,60,HOMBA:AA30180
 453,HOMBA:13079,OlfP,olfactory peduncle,912,olfactory peduncle,OlfP,13079,0,128,128,HOMBA:AA30180
 454,HOMBA:10331,CN,cerebral nuclei,96,cerebral nuclei,CN,10331,143,175,33,HOMBA:10158
-455,HOMBA:10332,BG,basal ganglia (basal nuclei),118,basal nuclei (basal ganglia),BN,10332,255,215,180,HOMBA:10331
-456,HOMBA:AA30190,BGR,regions of basal ganglia,913,,,,70,240,240,HOMBA:10332
+455,HOMBA:10332,BN,basal nuclei (basal ganglia),118,basal nuclei (basal ganglia),BN,10332,255,215,180,HOMBA:10331
+456,HOMBA:AA30190,BNR,regions of basal nuclei,913,,,,70,240,240,HOMBA:10332
 457,HOMBA:10333,STR,striatum (neostriatum),119,striatum,STR,10333,4,131,89,HOMBA:AA30190
 458,HOMBA:AA30191,STRre,regions of striatum,914,,,,230,25,75,HOMBA:10333
 459,HOMBA:AA30192,STRd,dorsal striatum (caudoputamen complex-CP),915,,,,255,57,154,HOMBA:AA30191
@@ -527,7 +527,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 525,HOMBA:11548,GPiM,medial (central) subdivision of GPi,948,central portion of GPi,GPic,11548,0,128,128,HOMBA:10344
 526,HOMBA:11549,GPiL,lateral (peripheral) subdivision of GPi,949,peripheral portion of GPi,GPip,11549,170,255,195,HOMBA:10344
 527,HOMBA:146034758,EnPN,entopeduncular nucleus,950,entopeduncular nucleus,EnPN,146034758,0,0,128,HOMBA:10342
-528,HOMBA:AA30208,BGDe,developing transient structures of basal ganglia,951,,,,240,50,230,HOMBA:10332
+528,HOMBA:AA30208,BNDe,developing transient structures of basal nuclei,951,,,,240,50,230,HOMBA:10332
 529,HOMBA:10549,GE,ganglionic eminence (VZ in basal nuclei),2441,Ganglionic eminence (VZ in basal nuclei),GE,10549,255,225,25,HOMBA:AA30208
 530,HOMBA:AA30209,SCB,striatal-cortical (cortical-striatal) boundary,952,,,,145,30,180,HOMBA:10549
 531,HOMBA:AA30210,LMS,lateral migratory stream,953,,,,0,128,128,HOMBA:AA30209
