@@ -15,5 +15,5 @@ The 2020 version (1) adds new annotations for layers of the Ammon’s horn (CA),
 
 #### Offline Access
 
-- The HOMBA ontology is available for offline access. [Download here](../_static/CCFv3_2020_terminology.html)
+- The CCFv3 ontology is available for offline access. [Download here](../_static/CCFv3_2020_terminology.csv)
 
