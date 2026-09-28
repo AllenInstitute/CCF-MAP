@@ -523,7 +523,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 521,HOMBA:AA30837,GPeL,lateral subdivision of GPe,2391,,,,0,128,128,HOMBA:10343
 522,HOMBA:AA30838,GPeM,medial subdivision of GPe,2392,,,,128,0,0,HOMBA:10343
 523,HOMBA:10345,VeP,ventral pallidum,134,Ventral pallidus,VeP,10345,155,25,245,HOMBA:10343
-524,HOMBA:AA30205,GPin,interstitial cholinergic nucleus of globus pallidus,947,,,,170,110,40,HOMBA:10342
+524,HOMBA:AA30205,GPin,interstitial nucleus of globus pallidus,947,,,,170,110,40,HOMBA:10342
 525,HOMBA:10344,GPi,internal division of globus pallidus,133,internal segment of globus pallidus,GPi,10344,167,219,51,HOMBA:10342
 526,HOMBA:11548,GPiM,medial (central) subdivision of GPi,948,central portion of GPi,GPic,11548,0,128,128,HOMBA:10344
 527,HOMBA:11549,GPiL,lateral (peripheral) subdivision of GPi,949,peripheral portion of GPi,GPip,11549,170,255,195,HOMBA:10344
@@ -676,10 +676,10 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 674,HOMBA:AA30262,CLEn,claustrum-endopiriform nuclear complex,1069,,,,170,255,195,HOMBA:10331
 675,HOMBA:AA30263,CLEnR,regions of claustrum-endopiriform nuclear complex,1070,,,,245,130,48,HOMBA:AA30262
 676,HOMBA:10346,Cla,claustrum,135,claustrum,Cla,10346,44,101,185,HOMBA:AA30263
-677,HOMBA:10347,CLd,dorsal claustrum,136,Dorsal claustrum,CLd,10347,228,2,208,HOMBA:10346
-678,HOMBA:10348,CLv,ventral claustrum,137,ventral claustrum,CLv,10348,137,216,173,HOMBA:10346
-679,HOMBA:146034762,CLt,temporal claustrum,138,temporal claustrum,CLt,146034762,207,216,155,HOMBA:10346
-680,HOMBA:AA30780,CLmc,magnocellular division of claustrum,2329,,,,128,128,0,HOMBA:10346
+677,HOMBA:10347,Cld,dorsal claustrum,136,Dorsal claustrum,CLd,10347,228,2,208,HOMBA:10346
+678,HOMBA:10348,Clv,ventral claustrum,137,ventral claustrum,CLv,10348,137,216,173,HOMBA:10346
+679,HOMBA:146034762,Clt,temporal claustrum,138,temporal claustrum,CLt,146034762,207,216,155,HOMBA:10346
+680,HOMBA:AA30780,Clmc,magnocellular division of claustrum,2329,,,,128,128,0,HOMBA:10346
 681,HOMBA:10371,En,endopiriform nucleus,1071,endopiriform nucleus,En,10371,240,50,230,HOMBA:AA30263
 682,HOMBA:AA30264,EnD,dorsal endopiriform nucleus,1072,,,,70,240,240,HOMBA:10371
 683,HOMBA:AA30854,EnV,ventral endopiriform nucleus,1073,,,,220,190,255,HOMBA:10371
@@ -1204,7 +1204,7 @@ graph_order,HOMBA_id,HOMBA_abbreviation,HOMBA_name,HOMBA_annotation_value,DHBA_n
 1202,HOMBA:AA30433,NIL,lateral division of nucleus incertus,1485,,,,0,0,128,HOMBA:146034972
 1203,HOMBA:146034968,PnE,ependyma and subependymal layers of pons,1486,ependyma and subependymal layers of pons,PnE,146034968,70,240,240,HOMBA:146034964
 1204,HOMBA:AA30845,PeG,periventricular gray of pons,1487,,,,170,255,195,HOMBA:146034964
-1205,HOMBA:12499,NC,nucleus coeruleus (locus coeruleus),431,nucleus coeruleus,NC,12499,58,106,250,HOMBA:146034964
+1205,HOMBA:12499,LC,locus coeruleus,431,nucleus coeruleus,NC,12499,58,106,250,HOMBA:146034964
 1206,HOMBA:12512,EpC,epicoeruleus nucleus,1488,epicoeruleus nucleus,EpC,12512,128,0,0,HOMBA:146034964
 1207,HOMBA:12443,Me5pn,"mesencephalic nucleus of trigeminal nerve, pontine part",412,"mesencephalic nucleus of trigeminal nerve, pontine part",Me5-p,12443,255,250,200,HOMBA:146034964
 1208,HOMBA:12417,PnEN,efferent nuclei of cranial nerves in pons,403,efferent nuclei of cranial nerves in pons,PnEN,12417,72,47,47,HOMBA:12416

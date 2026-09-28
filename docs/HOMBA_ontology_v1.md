@@ -13,5 +13,5 @@ The Harmonized Ontology of Mammalian Brain Anatomy (HOMBA) is a harmonized cross
 
 #### Offline Access
 
-- The HOMBA ontology is available for offline access in [**csv**](https://github.com/AllenInstitute/CCF-MAP/releases/latest/download/HOMBA.csv) and [**json**](https://github.com/AllenInstitute/CCF-MAP/releases/latest/download/HOMBA.json) formats. The csv also contains columns for mapping HOMBA to DHBA values.
+- The HOMBA ontology is available for offline access in [**csv**](https://github.com/AllenInstitute/CCF-MAP/releases/latest/download/HOMBA.csv) and [**json**](https://github.com/AllenInstitute/CCF-MAP/releases/latest/download/HOMBA.json) formats. The csv also contains columns for mapping HOMBA to Developing Human Brain Atlas (Ding et al. 2016) and Allen Human Reference Atlas (Ding et al. 2020) values.
 
