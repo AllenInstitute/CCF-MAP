@@ -2,7 +2,9 @@
 
 Digital 3D spatial atlases provide a framework for mapping large-scale multimodal datasets to a common reference space for visualization and analysis. Each atlas is comprised of an anatomical template, a coordinate space, regional parcellations of that template, and a set of taxonomic terms used to name the segmentations. Together, this set defines an **atlas** that can be used as a 3D reference for mapping volumetric and point cloud data. 
 
-This resource provides example notebooks for programmatic access to the Allen Institute's atlases and their components for quantification, visualization, and other spatial applications. 
+All atlases conform to the [Atlas assets format](https://atlas-assets.readthedocs.io/en/latest/index.html), an open, shared data standard derived from the [AtOM model](https://doi.org/10.1038/s41597-023-02389-4).
+
+This resource provides example notebooks for programmatic access to the Allen Institute's atlases and their components for quantification, visualization, and other spatial data analysis applications. We are partnering with the Sainsbury Wellcome Center to provide programmatic access to atlases using the [BrainGlobe Atlas API](https://brainglobe.info/documentation/brainglobe-atlasapi/index.html). 
 
 CCF data assets are hosted on a public S3 bucket on Amazon Web Services (AWS). All data assets described in this repository are available publicly with no account or login required for access. 
 
@@ -21,11 +23,9 @@ This release also contains the Allen Institute's mouse CCFv3 atlas (Wang et al. 
 
 Each atlas also includes Neuroglancer instances for interactive visualization. 
 
-**Note**: Future releases will be accessible through the [BrainGlobe Atlas API](https://brainglobe.info/documentation/brainglobe-atlasapi/index.html).
-
 ### Documentation and notebooks
 
 - **[Getting started](notebooks/getting_started.ipynb)**: Introduction to atlas assets and data organization
 - **[Navigating neuroglancer](docs/neuroglancer_primer.md)**: Brief introduction to navigating neuroglancer's interface for visualizing atlases
-- **[Working with annotatation volumes](notebooks/working_with_annotation_volume.ipynb)**: Primer on using CCFs for querying voxels and accessing region masks
+- **[Working with annotation volumes](notebooks/working_with_annotation_volume.ipynb)**: Primer on using CCFs for querying voxels and accessing region masks
 
